@@ -1,0 +1,42 @@
+﻿Parameter,Interpretation,value,Unit,Reference
+VA,Concentration of VEGF-A,1.00E-09,M,Assumed
+PDAA,Concentration of PDGF-AA,1.00E-09,M,Assumed
+PDAB,Concentration of PDGF-AB,1.00E-09,M,Assumed
+PDBB,Concentration of PDGF-BB,1.00E-09,M,Assumed
+R1,VEGFR1 density on endothelial cell,1.60E+03,molecule/cell,In-house data (Cheri)
+R2,VEGFR2 density on endothelial cell,4.09E+03,molecule/cell,In-house data (Cheri)
+N1,NRP1 density on endothelial cell,4.41E+04,molecule/cell,"Chen et al., 2015"
+PDRa,PDGFRα density on endothelial cell,5.00E+03,molecule/cell,In-house data (Cheri)
+PDRb,PDGFRβ density on endothelilal cell,5.34E+03,molecule/cell,In-house data (Cheri)
+konVAR1,Association rate of VEGF-A binding to VEGFR1,1.14E+07,1/M/s,Data-mining
+koffVAR1,Dissociation rate of VEGF-A bound to VEGFR1,1.00E-04,1/s,Data-mining
+konVAR2,Association rate of VEGF-A binding to VEGFR2,4.65E+06,1/M/s,Data-mining
+koffVAR2,Dissociation rate of VEGF-A bound to VEGFR2,7.70E-04,1/s,Data-mining
+konVAN1,Association rate of VEGF-A binding to NRP1,1.26E+06,1/M/s,Data-mining
+koffVAN1,Dissociation rate of VEGF-A bound to NRP1,3.48E-03,1/s,Data-mining
+kcVAN1_R2,Coupling rate of VEGF-A:NRP1 binding to VEGFR2,1.00E+14,cm2/mol/s,"Finley et al., 2011"
+koffVAN1_R2,Dissociation rate of VEGF-A:NRP1 bound to VEGFR2,1.00E-03,1/s,"Finley et al., 2012"
+kcVAR2_N1,Coupling rate of VEGF-A:VEGFR2 binding to NRP1,3.10E+13,cm2/mol/s,"Finley et al., 2013"
+koffVAR2_N1,Dissociation rate of VEGF-A:VEGFR2 bound to NRP1,1.00E-03,1/s,"Finley et al., 2014"
+konVAPDRa,Association rate of VEGF-A binding to PDGFRα,1.10E+03,1/M/s,"Mamer et al., 2017"
+koffVAPDRa,Dissociation rate of VEGF-A bound to PDGFRα,2.70E-05,1/s,"Mamer et al., 2017"
+konVAPDRb,Association rate of VEGF-A binding to PDGFRβ,1.20E+04,1/M/s,"Mamer et al., 2017"
+koffVAPDRb,Dissociation rate of VEGF-A bound to PDGFRβ,4.00E-06,1/s,"Mamer et al., 2017"
+konPDAAR2,Association rate of PDGF-AA binding to VEGFR2,2.04E+05,1/M/s,In-house data (Shobhan)
+koffPDAAR2,Dissociation rate of PDGF-AA bound to VEGFR2,3.04E-04,1/s,In-house data (Shobhan)
+konPDAAPDRa,Association rate of PDGF-AA binding to PDGFRα,1.62E+05,1/M/s,In-house data (Shobhan)
+koffPDAAPDRa,Dissociation rate of PDGF-AA bound to PDGFRα,3.83E-04,1/s,In-house data (Shobhan)
+konPDABR2,Association rate of PDGF-AB binding to VEGFR2,1.69E+05,1/M/s,In-house data (Shobhan)
+koffPDABR2,Dissociation rate of PDGF-AB bound to VEGFR2,3.77E-04,1/s,In-house data (Shobhan)
+konPDABPDRa,Association rate of PDGF-AB binding to PDGFRα,2.14E+05,1/M/s,In-house data (Shobhan)
+koffPDABPDRa,Dissociation rate of PDGF-AB bound to PDGFRα,5.81E-03,1/s,In-house data (Shobhan)
+konPDABPDRb,Association rate of PDGF-AB binding to PDGFRβ,1.30E+03,1/M/s,"Mamer et al., 2017"
+koffPDABPDRb,Dissociation rate of PDGF-AB bound to PDGFRβ,2.90E-03,1/s,"Mamer et al., 2017"
+konPDBBR2,Association rate of PDGF-BB binding to VEGFR2,3.31E+05,1/M/s,In-house data (Shobhan)
+koffPDBBR2,Dissociation rate of PDGF-BB bound to VEGFR2,7.55E-04,1/s,In-house data (Shobhan)
+konPDBBPDRa,Association rate of PDGF-BB binding to PDGFRα,2.19E+05,1/M/s,In-house data (Shobhan)
+koffPDBBPDRa,Dissociation rate of PDGF-BB bound to PDGFRα,3.03E-05,1/s,In-house data (Shobhan)
+konPDBBPDRb,Association rate of PDGF-BB binding to PDGFRβ,1.73E+05,1/M/s,In-house data (Shobhan)
+koffPDBBPDRb,Dissociation rate of PDGF-BB bound to PDGFRβ,3.21E-07,1/s,In-house data (Shobhan)
+konR1N1,Coupling rate of VEGFR1 and NRP1,2.50E+05,1/M/s,"Fuh et al., 2000"
+koffR1N1,Dissociation rate of VEGFR1:NRP1 complex,4.50E-04,1/s,"Fuh et al., 2000"

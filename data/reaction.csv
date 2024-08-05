@@ -1,0 +1,22 @@
+﻿Reaction,Parameter,
+VEGF-A,Forward,Backward
+VA + R1 <-> VA:R1,konVAR1,koffVAR1
+VA + R2 <-> VA:R2,konVAR2,koffVAR2
+VA + N1 <-> VA:N1,konVAN1,koffVAN1
+VA:N1 + R2 <-> VA:R2:N1,kcVAN1_R2,koffVAN1_R2
+VA:R2 + N1 <-> VA:R2:N1,kcVAR2_N1,koffVAR2_N1
+VA + PDRa <-> VA:PDRa,konVAPDRa,koffVAPDRa
+VA + PDRb <-> VA:PDRb,konVAPDRb,koffVAPDRb
+PDGF-AA,,
+PDAA + R2 <-> PDAA:R2,konPDAAR2,koffPDAAR2
+PDAA + PDRa <-> PDAA:PDRa,konPDAAPDRa,koffPDAAPDRa
+PDGF-AB,,
+PDAB + R2 <-> PDAB:R2,konPDABR2,koffPDABR2
+PDAB + PDRa <-> PDAB:PDRa,konPDABPDRa,koffPDABPDRa
+PDAB + PDRb <-> PDAB:PDRb,konPDABPDRb,koffPDABPDRb
+PDGF-BB,,
+PDBB + R2 <-> PDBB:R2,konPDBBR2,koffPDBBR2
+PDBB + PDRa <-> PDBB:PDRa,konPDBBPDRa,koffPDBBPDRa
+PDBB + PDRb <-> PDBB:PDRb,konPDBBPDRb,koffPDBBPDRb
+VEGFR1:NRP1,,
+VEGFR1 + NRP1 <-> VEGFR1:NRP1,konR1N1,koffR1N1
