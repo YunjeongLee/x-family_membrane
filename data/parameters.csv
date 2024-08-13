@@ -18,6 +18,14 @@ kcVAN1_R2,Coupling rate of VEGF-A:NRP1 binding to VEGFR2,1.00E+14,cm2/mol/s,"Fin
 koffVAN1_R2,Dissociation rate of VEGF-A:NRP1 bound to VEGFR2,1.00E-03,1/s,"Finley et al., 2012"
 kcVAR2_N1,Coupling rate of VEGF-A:VEGFR2 binding to NRP1,3.10E+13,cm2/mol/s,"Finley et al., 2013"
 koffVAR2_N1,Dissociation rate of VEGF-A:VEGFR2 bound to NRP1,1.00E-03,1/s,"Finley et al., 2014"
+konVBR1,Association rate of VEGF-B binding to VEGFR1,1.58E+05,1/M/s,In-house data (Shobhan)
+koffVBR1,Dissociation rate of VEGF-B bound to VEGFR1,9.15E-05,1/s,In-house data (Shobhan)
+konVBN1,Association rate of VEGF-B binding to NRP1,1.26E+05,1/M/s,In-house data (Shobhan)
+koffVBN1,Dissociation rate of VEGF-B bound to NRP1,1.94E-04,1/s,In-house data (Shobhan)
+konPlR1,Association rate of PlGF binding to VEGFR1,,1/M/s,"Hoffman et al., 2013"
+koffPlR1,Dissociation rate of PlGF bound to VEGFR1,,1/s,"Hoffman et al., 2013"
+konPlN1,Association rate of PlGF binding to NRP1,,1/M/s,"Hoffman et al., 2013"
+koffPlN1,Dissociation rate of PlGF bound to NRP1,,1/s,"Hoffman et al., 2013"
 konVAPDRa,Association rate of VEGF-A binding to PDGFRα,1.10E+03,1/M/s,"Mamer et al., 2017"
 koffVAPDRa,Dissociation rate of VEGF-A bound to PDGFRα,2.70E-05,1/s,"Mamer et al., 2017"
 konVAPDRb,Association rate of VEGF-A binding to PDGFRβ,1.20E+04,1/M/s,"Mamer et al., 2017"
