@@ -8,6 +8,25 @@ R2,VEGFR2 density on endothelial cell,4.09E+03,molecule/cell,In-house data (Cher
 N1,NRP1 density on endothelial cell,4.41E+04,molecule/cell,"Chen et al., 2015"
 PDRa,PDGFRα density on endothelial cell,5.00E+03,molecule/cell,In-house data (Cheri)
 PDRb,PDGFRβ density on endothelilal cell,5.34E+03,molecule/cell,In-house data (Cheri)
+VA_R1,Concentration of VEGF-A:VEGFR1,0.00E+00,M,Assumed
+VA_R2,Concentration of VEGF-A:VEGFR2,0.00E+00,M,Assumed
+VA_N1,Concentration of VEGF-A:NRP1,0.00E+00,M,Assumed
+VA_R2_N1,Concentration of VEGF-A:VEGFR2:NRP1,0.00E+00,M,Assumed
+VA_PDRa,Concentration of VEGF-A:PDGFRα,0.00E+00,M,Assumed
+VA_PDRb,Concentration of VEGF-A:PDGFRβ,0.00E+00,M,Assumed
+VB_R1,Concentration of VEGF-B:VEGFR1,0.00E+00,M,Assumed
+VB_N1,Concentration of VEGF-B:PlGF,0.00E+00,M,Assumed
+Pl_R1,Concentration of PlGF:VEGFR1,0.00E+00,M,Assumed
+Pl_N1,Concentration of PlGF:NRP1,0.00E+00,M,Assumed
+PDAA_R2,Concentration of PDGF-AA:VEGFR2,0.00E+00,M,Assumed
+PDAA_PDRa,Concentration of PDGF-AA:PDGFRα,0.00E+00,M,Assumed
+PDAB_R2,Concentration of PDGF-AB:VEGFR2,0.00E+00,M,Assumed
+PDAB_PDRa,Concentration of PDGF-AB:PDGFRα,0.00E+00,M,Assumed
+PDAB_PDRb,Concentration of PDGF-AB:PDGFRβ,0.00E+00,M,Assumed
+PDBB_R2,Concentration of PDGF-BB:VEGFR2,0.00E+00,M,Assumed
+PDBB_PDRa,Concentration of PDGF-BB:PDGFRα,0.00E+00,M,Assumed
+PDBB_PDRb,Concentration of PDGF-BB:PDGFRβ,0.00E+00,M,Assumed
+R1_N1,Concentration of VEGFR1:NRP1,0.00E+00,M,Assumed
 konVAR1,Association rate of VEGF-A binding to VEGFR1,1.14E+07,1/M/s,Data-mining
 koffVAR1,Dissociation rate of VEGF-A bound to VEGFR1,1.00E-04,1/s,Data-mining
 konVAR2,Association rate of VEGF-A binding to VEGFR2,4.65E+06,1/M/s,Data-mining
