@@ -7,6 +7,12 @@ VA:N1 + R2 <-> VA:R2:N1,kcVAN1_R2,koffVAN1_R2
 VA:R2 + N1 <-> VA:R2:N1,kcVAR2_N1,koffVAR2_N1
 VA + PDRa <-> VA:PDRa,konVAPDRa,koffVAPDRa
 VA + PDRb <-> VA:PDRb,konVAPDRb,koffVAPDRb
+VEGF-B,,
+VB + R1 <-> VB:R1,konVBR1,koffVBR1
+VB + N1 <-> VB:N1,konVBN1,koffVBN1
+PlGF,,
+Pl + R1 <-> Pl:R1,konPlR1,koffPlR1
+Pl + N1 <-> Pl:N1,konPlN1,koffPlN1
 PDGF-AA,,
 PDAA + R2 <-> PDAA:R2,konPDAAR2,koffPDAAR2
 PDAA + PDRa <-> PDAA:PDRa,konPDAAPDRa,koffPDAAPDRa
