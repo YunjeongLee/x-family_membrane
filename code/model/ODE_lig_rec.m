@@ -114,7 +114,7 @@ dPDBB_PDRb = dPDBB_PDRb + konPDBBPDRb * PDBB * PDRb - koffPDBBPDRb * PDBB_PDRb;
 
 %% R1 + N1 <-> R1_N1
 dR1    = dR1 - konR1N1 * R1 * N1 + koffR1N1 * R1_N1;
-dN1    = dN1 - konR1N1 * R1 * N1 + koffR1N1 * R1_N1;
+dN1    = dN1    - konR1N1 * R1 * N1 + koffR1N1 * R1_N1;
 dR1_N1 = dR1_N1 + konR1N1 * R1 * N1 - koffR1N1 * R1_N1;
 
 %% Gather dydt
