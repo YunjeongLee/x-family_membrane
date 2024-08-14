@@ -1,5 +1,7 @@
 ﻿Parameter,Interpretation,value,Unit,Reference
 VA,Concentration of VEGF-A,1.00E-09,M,Assumed
+VB,Concentration of VEGF-B,1.00E-09,M,Assumed
+Pl,Concentration of PlGF,1.00E-09,M,Assumed
 PDAA,Concentration of PDGF-AA,1.00E-09,M,Assumed
 PDAB,Concentration of PDGF-AB,1.00E-09,M,Assumed
 PDBB,Concentration of PDGF-BB,1.00E-09,M,Assumed
