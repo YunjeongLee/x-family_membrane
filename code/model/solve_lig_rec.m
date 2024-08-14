@@ -8,4 +8,9 @@ options = odeset('AbsTol', 1e-20, 'RelTol', 1e-9);
 
 [~, sol] = ode15s(@(t, y) ODE_lig_rec(t, y, params_struct), time_stamp, y0, options);
 
+%% Save result as structure
+for i = 1:length(y0)
+    result.(params_struct.species_names{i}) = sol(:, i);
+end
+
 end
