@@ -30,4 +30,21 @@ result.PDAA_free = sol(:, ind_PDAA);
 result.PDAB_free = sol(:, ind_PDAB);
 result.PDBB_free = sol(:, ind_PDBB);
 
+%% Bound ligand (pM)
+% Find index containing each ligand name
+ind_VA = contains(params_struct.species_names, 'VA_');
+ind_VB = contains(params_struct.species_names, 'VB_');
+ind_Pl = contains(params_struct.species_names, 'Pl_');
+ind_PDAA = contains(params_struct.species_names, 'PDAA_');
+ind_PDAB = contains(params_struct.species_names, 'PDAB_');
+ind_PDBB = contains(params_struct.species_names, 'PDBB_');
+
+% Record the concentration
+result.VA_bound = sum(sol(:, ind_VA), 2);
+result.VB_bound = sum(sol(:, ind_VB), 2);
+result.Pl_bound = sum(sol(:, ind_Pl), 2);
+result.PDAA_bound = sum(sol(:, ind_PDAA), 2);
+result.PDAB_bound = sum(sol(:, ind_PDAB), 2);
+result.PDBB_bound = sum(sol(:, ind_PDBB), 2);
+
 end
