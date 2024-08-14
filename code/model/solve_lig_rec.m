@@ -47,4 +47,20 @@ result.PDAA_bound = sum(sol(:, ind_PDAA), 2);
 result.PDAB_bound = sum(sol(:, ind_PDAB), 2);
 result.PDBB_bound = sum(sol(:, ind_PDBB), 2);
 
+%% Free receptors (pM)
+% Find index for free receptors
+ind_R1 = strcmp(params_struct.species_names, 'R1');
+ind_R1_N1 = strcmp(params_struct.species_names, 'R1_N1');
+ind_R2 = strcmp(params_struct.species_names, 'R2');
+ind_N1 = strcmp(params_struct.species_names, 'N1');
+ind_PDRa = strcmp(params_struct.species_names, 'PDRa');
+ind_PDRb = strcmp(params_struct.species_names, 'PDRb');
+
+% Record concentration
+result.R1_free = ( sol(:, ind_R1) + sol(:, ind_R1_N1) );
+result.R2_free = sol(:, ind_R2);
+result.N1_free = sol(:, ind_N1);
+result.PDRa_free = sol(:, ind_PDRa);
+result.PDRb_free = sol(:, ind_PDRb);
+
 end
