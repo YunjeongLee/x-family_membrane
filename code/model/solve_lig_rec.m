@@ -63,4 +63,19 @@ result.N1_free = sol(:, ind_N1);
 result.PDRa_free = sol(:, ind_PDRa);
 result.PDRb_free = sol(:, ind_PDRb);
 
+%% Bound receptors (pM)
+% Find index for bound receptors
+ind_R1 = contains(params_struct.species_names, '_R1');
+ind_R2 = contains(params_struct.species_names, '_R2');
+ind_N1 = (contains(params_struct.species_names, '_N1') & ~strcmp(params_struct.species_names, 'R1_N1'));
+ind_PDRa = contains(params_struct.species_names, '_PDRa');
+ind_PDRb = contains(params_struct.species_names, '_PDRb');
+
+% Record concentration
+result.R1_bound = sum(sol(:, ind_R1), 2);
+result.R2_bound = sum(sol(:, ind_R2), 2);
+result.N1_bound = sum(sol(:, ind_N1), 2);
+result.PDRa_bound = sum(sol(:, ind_PDRa), 2);
+result.PDRb_bound = sum(sol(:, ind_PDRb), 2);
+
 end
