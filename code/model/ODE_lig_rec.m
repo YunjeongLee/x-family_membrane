@@ -105,7 +105,7 @@ dPDBB_R2 = dPDBB_R2 + konPDBBR2 * PDBB * R2 - koffPDBBR2 * PDBB_R2;
 %% PDBB + PDRa <-> PDBB_PDRa
 dPDBB      = dPDBB      - konPDBBPDRa * PDBB * PDRa + koffPDBBPDRa * PDBB_PDRa;
 dPDRa      = dPDRa      - konPDBBPDRa * PDBB * PDRa + koffPDBBPDRa * PDBB_PDRa;
-dPDAB_PDRa = dPDAB_PDRa + konPDBBPDRa * PDBB * PDRa - koffPDBBPDRa * PDBB_PDRa;
+dPDBB_PDRa = dPDBB_PDRa + konPDBBPDRa * PDBB * PDRa - koffPDBBPDRa * PDBB_PDRa;
 
 %% PDBB + PDRb <-> PDBB_PDRb
 dPDBB      = dPDBB      - konPDBBPDRb * PDBB * PDRb + koffPDBBPDRb * PDBB_PDRb;
