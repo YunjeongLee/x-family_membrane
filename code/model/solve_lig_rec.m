@@ -1,4 +1,4 @@
-function sol = solve_lig_rec(time_stamp, params_struct)
+function result = solve_lig_rec(time_stamp, params_struct)
 %% Define initial condition
 params_cell = struct2cell(params_struct);
 y0 = cell2mat(params_cell(1:params_struct.num_state));
