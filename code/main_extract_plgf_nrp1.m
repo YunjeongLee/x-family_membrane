@@ -58,8 +58,6 @@ for i = 1:length(plgf_conc)
 
     % Estimate kon
     [theta, ~, ~] = minimizer(data_set{1}, @(data, params, theta) cost_spr(data, assoc_fun, params, theta), params, theta0);
-    Rmax_est(i) = theta(1);
-    kon_est(i) = theta(2);
     
     % Update params
     params_update = params;
