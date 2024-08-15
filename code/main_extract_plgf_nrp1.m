@@ -51,7 +51,7 @@ for i = 1:length(plgf_conc)
               'kon', 1e4, true};
 
     % Define initial theta
-    theta0 = [200; 1e4];
+    theta0 = 1e4;
 
     % Define association function
     assoc_fun = @assoc_func;
