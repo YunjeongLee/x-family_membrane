@@ -62,7 +62,7 @@ for i = 1:length(plgf_conc)
     % Update params
     params_update = params;
     isEstimated = cell2mat(params(:, 3));
-    params_update(isEstimated, 2) = num2cell(theta);
+    params_update(isEstimated, 2) = num2cell(kon_est(i));
     params_update = cell2struct(params_update(:, 2), params_update(:, 1));
     params_update.R0 = data_set{1}(end, 2);
 
