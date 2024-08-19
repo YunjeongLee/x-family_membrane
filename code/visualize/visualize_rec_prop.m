@@ -7,7 +7,7 @@ R1 = [result.R1_free(end), result.R1_bound(end)]/(result.R1_free(end) + result.R
 R2 = [result.R2_free(end), result.R2_bound(end)]/(result.R2_free(end) + result.R2_bound(end)) * 100;
 N1 = [result.N1_free(end), result.N1_bound(end)]/(result.N1_free(end) + result.N1_bound(end)) * 100;
 PDRa = [result.PDRa_free(end), result.PDRa_bound(end)]/(result.PDRa_free(end) + result.PDRa_bound(end)) * 100;
-PDRb = [result.R1_free(end), result.R1_bound(end)]/(result.R1_free(end) + result.R1_bound(end)) * 100;
+PDRb = [result.PDRb_free(end), result.R1_bound(end)]/(result.PDRb_free(end) + result.R1_bound(end)) * 100;
 
 %% Generate data for plot
 data = [R1; R2; N1; PDRa; PDRb];
