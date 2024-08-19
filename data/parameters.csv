@@ -58,7 +58,7 @@ koffPDAAPDRa,Dissociation rate of PDGF-AA bound to PDGFRα,3.83E-04,1/s,In-house
 konPDABR2,Association rate of PDGF-AB binding to VEGFR2,1.69E+05,1/M/s,In-house data (Shobhan)
 koffPDABR2,Dissociation rate of PDGF-AB bound to VEGFR2,3.77E-04,1/s,In-house data (Shobhan)
 konPDABPDRa,Association rate of PDGF-AB binding to PDGFRα,2.14E+05,1/M/s,In-house data (Shobhan)
-koffPDABPDRa,Dissociation rate of PDGF-AB bound to PDGFRα,5.81E-03,1/s,In-house data (Shobhan)
+koffPDABPDRa,Dissociation rate of PDGF-AB bound to PDGFRα,5.81E-04,1/s,In-house data (Shobhan)
 konPDABPDRb,Association rate of PDGF-AB binding to PDGFRβ,1.30E+03,1/M/s,"Mamer et al., 2017"
 koffPDABPDRb,Dissociation rate of PDGF-AB bound to PDGFRβ,2.90E-03,1/s,"Mamer et al., 2017"
 konPDBBR2,Association rate of PDGF-BB binding to VEGFR2,3.31E+05,1/M/s,In-house data (Shobhan)
