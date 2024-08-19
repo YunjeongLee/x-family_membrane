@@ -6,7 +6,7 @@ color_lig = {'#A4036F', '#54478C', '#048BA8', '#16DB93', '#EFEA5A', '#F29E4C'};
 R1 = [result.R1_free(end), result.R1_bound(end)]/(result.R1_free(end) + result.R1_bound(end)) * 100;
 R2 = [result.R2_free(end), result.R2_bound(end)]/(result.R2_free(end) + result.R2_bound(end)) * 100;
 N1 = [result.N1_free(end), result.N1_bound(end)]/(result.N1_free(end) + result.N1_bound(end)) * 100;
-PDRa = [result.PDRa_free(end), result.R1_bound(end)]/(result.PDRa_free(end) + result.R1_bound(end)) * 100;
+PDRa = [result.PDRa_free(end), result.PDRa_bound(end)]/(result.PDRa_free(end) + result.PDRa_bound(end)) * 100;
 PDRb = [result.R1_free(end), result.R1_bound(end)]/(result.R1_free(end) + result.R1_bound(end)) * 100;
 
 %% Generate data for plot
