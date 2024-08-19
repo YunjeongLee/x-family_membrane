@@ -13,7 +13,7 @@ for i = 1:length(y0)
     result.(params_struct.species_names{i}) = sol(:, i);
 end
 
-%% Free ligand (pM)
+%% Free ligand (M)
 % Find index for free ligands
 ind_VA = strcmp(params_struct.species_names, 'VA');
 ind_VB = strcmp(params_struct.species_names, 'VB');
@@ -30,7 +30,7 @@ result.PDAA_free = sol(:, ind_PDAA);
 result.PDAB_free = sol(:, ind_PDAB);
 result.PDBB_free = sol(:, ind_PDBB);
 
-%% Bound ligand (pM)
+%% Bound ligand (M)
 % Find index containing each ligand name
 ind_VA = contains(params_struct.species_names, 'VA_');
 ind_VB = contains(params_struct.species_names, 'VB_');
@@ -47,7 +47,7 @@ result.PDAA_bound = sum(sol(:, ind_PDAA), 2);
 result.PDAB_bound = sum(sol(:, ind_PDAB), 2);
 result.PDBB_bound = sum(sol(:, ind_PDBB), 2);
 
-%% Free receptors (pM)
+%% Free receptors (M)
 % Find index for free receptors
 ind_R1 = strcmp(params_struct.species_names, 'R1');
 ind_R1_N1 = strcmp(params_struct.species_names, 'R1_N1');
@@ -63,7 +63,7 @@ result.N1_free = sol(:, ind_N1);
 result.PDRa_free = sol(:, ind_PDRa);
 result.PDRb_free = sol(:, ind_PDRb);
 
-%% Bound receptors (pM)
+%% Bound receptors (M)
 % Find index for bound receptors
 ind_R1 = contains(params_struct.species_names, '_R1');
 ind_R2 = contains(params_struct.species_names, '_R2');
