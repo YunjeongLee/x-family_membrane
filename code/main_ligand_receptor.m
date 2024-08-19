@@ -32,7 +32,7 @@ params_struct.species_names = params_raw{1:params_struct.num_state, 'Parameter'}
 % Define timeline
 time_stamp = 0:3600:3600*7*5*4*12*5;
 
-[sol_all_lig, result_all_lig] = solve_lig_rec(time_stamp, params_struct);
+result_all_lig = solve_lig_rec(time_stamp, params_struct);
 
 %% Visualization
 visualize_dynamics(time_stamp, result_all_lig, result_foldername)
