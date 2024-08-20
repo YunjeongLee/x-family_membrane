@@ -61,8 +61,6 @@ for i = 1:length(lig)
     result_lig{i} = solve_lig_rec(time_stamp, params_struct);
 
     % Visualization
-    visualize_dynamics(time_stamp, result_lig{i}, result_foldername)
-    visualize_lig_prop(result_lig{i}, result_foldername)
-    visualize_rec_prop(result_lig{i}, result_foldername)
+    visualize_each_ligand(params_struct, time_stamp, result_all_lig, result_lig{i}, result_foldername)
 end
 
