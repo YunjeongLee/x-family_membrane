@@ -230,7 +230,7 @@ for j = 1:size(data, 2)
     end
 end
 xticklabels(rec_lgd)
-legend({sprintf('%s-treated', lig), 'All ligands'}, 'Location', 'northeastoutside')
+legend({sprintf('%s-treated', lig_lgd), 'All ligands'}, 'Location', 'northeastoutside')
 xlim([0 length(rec)+1])
 ylim([0 100])
 ylabel('Proportion (%)')
