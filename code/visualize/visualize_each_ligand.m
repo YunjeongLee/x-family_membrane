@@ -1,12 +1,4 @@
 function [] = visualize_each_ligand(params_struct, time_stamp, result_all, result_each, result_foldername)
-%% Find index for free ligands
-ind_VA = strcmp(params_struct.species_names, 'VA');
-ind_VB = strcmp(params_struct.species_names, 'VB');
-ind_Pl = strcmp(params_struct.species_names, 'Pl');
-ind_PDAA = strcmp(params_struct.species_names, 'PDAA');
-ind_PDAB = strcmp(params_struct.species_names, 'PDAB');
-ind_PDBB = strcmp(params_struct.species_names, 'PDBB');
-
 %% Colors
 color_lig = {'#A4036F', '#54478C', '#048BA8', '#16DB93', '#EFEA5A', '#F29E4C'};
 color_rec = {'#729EA1', '#B5BD89', '#DFBE99', '#EC9192', '#DB5375'};
