@@ -1,0 +1,15 @@
+function [] = visualize_stack_area(data, xrange, color, ttl, xtick, xlabels, lgd, filename)
+figure('Position', [10 10 1600 500]);
+for i = 1:size(data, 3)
+    subplot(2, 3, i);
+    area(xrange, data(:, :, i), 'EdgeColor', 'none');
+    colororder(color);
+    xlabel(sprintf('[%s] (rec/cell)', xlabels))
+    ylabel('Proportion (%)')
+    ylim([0 100])
+    title(ttl{i})
+    legend(lgd, 'Location', 'northeastoutside')
+    set(gca, 'fontsize', 15, 'xtick', xtick)
+end
+saveas(gca, filename, 'epsc')
+saveas(gca, filename, 'epsc')
