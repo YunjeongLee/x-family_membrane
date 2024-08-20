@@ -123,7 +123,7 @@ ylim([0 100]);
 xticklabels({sprintf('%s-treated', lig), 'All ligands'})
 ylabel('Proportion (%)')
 legend('Free', 'Bound', 'location', 'northeastoutside')
-set(gca, 'fontsize', 20);
+set(gca, 'fontsize', 25);
 saveas(gca, sprintf('%s/free_VS_bound_%s', result_foldername, lig), 'png');
 saveas(gca, sprintf('%s/free_VS_bound_%s', result_foldername, lig), 'epsc');
 
@@ -177,7 +177,7 @@ end
 hold off;
 legend([b1, b2], 'Free (each ligand)', 'Bound (each ligand)', ...
     'Free (all ligands)', 'Bound (all ligands)', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 20)
+set(gca, 'fontsize', 25)
 saveas(gca, sprintf('%s/Receptor_free_VS_bound_%s', result_foldername, lig), 'png')
 saveas(gca, sprintf('%s/Receptor_free_VS_bound_%s', result_foldername, lig), 'epsc')
 
@@ -226,6 +226,6 @@ legend({sprintf('%s-treated', lig), 'All ligands'}, 'Location', 'northeastoutsid
 xlim([0 length(rec)+1])
 ylim([0 70])
 ylabel('Proportion (%)')
-set(gca, 'fontsize', 20)
+set(gca, 'fontsize', 25)
 saveas(gca, sprintf('%s/Receptor_free_VS_bound_%s', result_foldername, lig), 'png')
 saveas(gca, sprintf('%s/Receptor_free_VS_bound_%s', result_foldername, lig), 'epsc')
