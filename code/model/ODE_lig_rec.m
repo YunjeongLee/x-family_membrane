@@ -1,6 +1,45 @@
 function dydt = ODE_lig_rec(t, y, params_struct)
 %% Assign params
-assign_params(params_struct);
+konVAR1 = params_struct.konVAR1;
+koffVAR1 = params_struct.koffVAR1;
+konVAR2 = params_struct.konVAR2;
+koffVAR2 = params_struct.koffVAR2;
+konVAN1 = params_struct.konVAN1;
+koffVAN1 = params_struct.koffVAN1;
+kcVAN1_R2 = params_struct.kcVAN1_R2;
+koffVAN1_R2 = params_struct.koffVAN1_R2;
+kcVAR2_N1 = params_struct.kcVAR2_N1;
+koffVAR2_N1 = params_struct.koffVAR2_N1;
+konVBR1 = params_struct.konVBR1;
+koffVBR1 = params_struct.koffVBR1;
+konVBN1 = params_struct.konVBN1;
+koffVBN1 = params_struct.koffVBN1;
+konPlR1 = params_struct.konPlR1;
+koffPlR1 = params_struct.koffPlR1;
+konPlN1 = params_struct.konPlN1;
+koffPlN1 = params_struct.koffPlN1;
+konVAPDRa = params_struct.konVAPDRa;
+koffVAPDRa = params_struct.koffVAPDRa;
+konVAPDRb = params_struct.konVAPDRb;
+koffVAPDRb = params_struct.koffVAPDRb;
+konPDAAR2 = params_struct.konPDAAR2;
+koffPDAAR2 = params_struct.koffPDAAR2;
+konPDAAPDRa = params_struct.konPDAAPDRa;
+koffPDAAPDRa = params_struct.koffPDAAPDRa;
+konPDABR2 = params_struct.konPDABR2;
+koffPDABR2 = params_struct.koffPDABR2;
+konPDABPDRa = params_struct.konPDABPDRa;
+koffPDABPDRa = params_struct.koffPDABPDRa;
+konPDABPDRb = params_struct.konPDABPDRb;
+koffPDABPDRb = params_struct.koffPDABPDRb;
+konPDBBR2 = params_struct.konPDBBR2;
+koffPDBBR2 = params_struct.koffPDBBR2;
+konPDBBPDRa = params_struct.konPDBBPDRa;
+koffPDBBPDRa = params_struct.koffPDBBPDRa;
+konPDBBPDRb = params_struct.konPDBBPDRb;
+koffPDBBPDRb = params_struct.koffPDBBPDRb;
+konR1N1 = params_struct.konR1N1;
+koffR1N1 = params_struct.koffR1N1;
 
 %% Distribute y
 y_cell = num2cell(y);
