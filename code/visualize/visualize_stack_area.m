@@ -12,4 +12,4 @@ for i = 1:size(data, 3)
     set(gca, 'fontsize', 15, 'xtick', xtick)
 end
 saveas(gca, filename, 'epsc')
-saveas(gca, filename, 'epsc')
+saveas(gca, filename, 'png')
