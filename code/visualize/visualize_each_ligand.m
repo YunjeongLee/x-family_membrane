@@ -157,7 +157,7 @@ for j = 1:size(ratio_each, 2)
             end
     end
 end
-xticklabels([{''}, rec_lgd, {''}])
+xticklabels(rec_lgd)
 xlim([0 length(rec)+1])
 ylim([0 100])
 ylabel('Proportion (%)')
