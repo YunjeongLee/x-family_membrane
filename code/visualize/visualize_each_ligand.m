@@ -127,6 +127,7 @@ end
 xlim([0 3]);
 ylim([0 100]);
 xticklabels({sprintf('%s-treated', lig_lgd), 'All ligands'})
+xtickangle(45)
 ylabel('Proportion (%)')
 legend('Free', 'Bound', 'location', 'northeastoutside')
 set(gca, 'fontsize', 25);
