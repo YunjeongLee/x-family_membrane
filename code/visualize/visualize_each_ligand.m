@@ -108,7 +108,7 @@ data = [ratio_each; ratio_all];
 figure('Position', [10 10 600 400]);
 b = bar(1:2, data, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.5);
 b(1).FaceColor = color_lig{1};
-b(2).FaceColor = color_lig{3};
+b(2).FaceColor = color_lig{5};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
             if j ~= 2
@@ -147,7 +147,7 @@ figure('Position', [10 10 1600 500]);
 hold on;
 b1 = bar((1:length(rec)) - 0.2, ratio_each, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.3);
 b1(1).FaceColor = color_lig{1};
-b1(2).FaceColor = color_lig{3};
+b1(2).FaceColor = color_lig{5};
 for j = 1:size(ratio_each, 2)
     for i = 1:size(ratio_each, 1)
             if j ~= 2
@@ -203,7 +203,7 @@ data = [ratio_each(:, 2), ratio_all];
 figure('Position', [10 10 1200 500]);
 b = bar(1:length(rec), data, 'EdgeColor', 'none', 'BarWidth', 1);
 b(1).FaceColor = color_lig{1};
-b(2).FaceColor = color_lig{3};
+b(2).FaceColor = color_lig{5};
 for j = 1:size(data, 2)
     if j == 1
         for i = 1:size(data, 1)

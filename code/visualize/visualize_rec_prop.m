@@ -16,7 +16,7 @@ data = [R1; R2; N1; PDRa; PDRb];
 figure('Position', [10 10 1200 500]);
 b = bar(1:5, data, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.5);
 b(1).FaceColor = color_lig{1};
-b(2).FaceColor = color_lig{3};
+b(2).FaceColor = color_lig{5};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
             if j ~= 2
