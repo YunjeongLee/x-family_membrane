@@ -218,17 +218,9 @@ figure('Position', [10 10 200*length(rec)+200 500]);
 b = bar(1:length(rec), data, 'EdgeColor', 'none', 'BarWidth', 1);
 b(1).FaceColor = color_lig{1};
 b(2).FaceColor = color_lig{5};
-for j = 1:size(data, 2)
-    if j == 1
         for i = 1:size(data, 1)
             text(i-0.3, data(i, j)+3, sprintf('%.2f', data(i, j)), 'FontSize', 20, 'Color', 'k');
         end
-    else
-        for i = 1:size(data, 1)
-            text(i+0, data(i, j)+3, sprintf('%.2f', data(i, j)), 'FontSize', 20, 'Color', 'k');
-        end
-    end
-end
 xticklabels(rec_lgd)
 legend({sprintf('%s-treated', lig_lgd), 'All ligands'}, 'Location', 'northeastoutside')
 xlim([0 length(rec)+1])
