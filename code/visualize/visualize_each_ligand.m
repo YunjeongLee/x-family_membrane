@@ -182,19 +182,25 @@ saveas(gca, sprintf('%s/Receptor_free_VS_bound_%s', result_foldername, lig), 'pn
 saveas(gca, sprintf('%s/Receptor_free_VS_bound_%s', result_foldername, lig), 'epsc')
 
 %% Visualize proportion of a specified ligand occupying each receptor
+ratio_each = zeros(length(rec), 1);
 ratio_all = zeros(length(rec), 1);
 for i = 1:length(rec)
+    bound_rec_each = result_each.(sprintf('%s_bound', rec{i}));
     bound_rec_all = result_all.(sprintf('%s_bound', rec{i}));
     if strcmp(lig, 'VA') && strcmp(rec{i}, 'R2')
         complex = {[lig, '_', rec{i}], [lig, '_', rec{i}, '_N1']};
+        lig_rec_each = result_each.(sprintf('%s', complex{1})) + result_each.(sprintf('%s', complex{2}));
         lig_rec = result_all.(sprintf('%s', complex{1})) + result_all.(sprintf('%s', complex{2}));
     elseif strcmp(lig, 'VA') && strcmp(rec{i}, 'N1')
         complex = {[lig, '_', rec{i}], [lig, '_R2_', rec{i}]};
+        lig_rec_each = result_each.(sprintf('%s', complex{1})) + result_each.(sprintf('%s', complex{2}));
         lig_rec = result_all.(sprintf('%s', complex{1})) + result_all.(sprintf('%s', complex{2}));
     else
         complex = [lig, '_', rec{i}];
+        lig_rec_each = result_each.(sprintf('%s', complex));
         lig_rec = result_all.(sprintf('%s', complex));
     end
+    ratio_each(i) = lig_rec_each(end)/bound_rec_each(end) * 100;
     ratio_all(i) = lig_rec(end)/bound_rec_all(end) * 100;
 end
 data = [ratio_each(:, 2), ratio_all];
