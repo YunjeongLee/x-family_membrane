@@ -4,6 +4,13 @@ color_lig = {'#A4036F', '#54478C', '#048BA8', '#16DB93', '#EFEA5A', '#F29E4C'};
 color_rec = {'#729EA1', '#B5BD89', '#DFBE99', '#EC9192', '#DB5375'};
 
 %% Check which ligand was treated and set receptors and color for the plot
+VA_exist = params_struct.VA(1);
+VB_exist = params_struct.VB(1);
+Pl_exist = params_struct.Pl(1);
+PDAA_exist = params_struct.PDAA(1);
+PDAB_exist = params_struct.PDAB(1);
+PDBB_exist = params_struct.PDBB(1);
+
 if VA_exist ~= 0
     lig = 'VA';
     rec = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
