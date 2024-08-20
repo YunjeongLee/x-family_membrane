@@ -1,6 +1,6 @@
 function [] = visualize_dynamics(time_stamp, result, result_foldername)
 %% Colors
-color_lig = {'#A4036F', '#54478C', '#048BA8', '#16DB93', '#EFEA5A', '#F29E4C'};
+color_lig = {'#ff595e', '#ff924c', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'};
 color_rec = {'#8ecae6', '#219ebc', '#023047', '#ffb703', '#fb8500'};
 
 %% List of ligands and receptors
