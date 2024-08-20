@@ -126,7 +126,7 @@ for j = 1:size(data, 2)
 end
 xlim([0 3]);
 ylim([0 100]);
-xticklabels({sprintf('%s-treated', lig), 'All ligands'})
+xticklabels({sprintf('%s-treated', lig_lgd), 'All ligands'})
 ylabel('Proportion (%)')
 legend('Free', 'Bound', 'location', 'northeastoutside')
 set(gca, 'fontsize', 25);
