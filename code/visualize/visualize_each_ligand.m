@@ -143,7 +143,7 @@ for i = 1:length(rec)
 end
 
 % Plot figure
-figure('Position', [10 10 1600 500]);
+figure('Position', [10 10 200*length(rec)+600 500]);
 hold on;
 b1 = bar((1:length(rec)) - 0.2, ratio_each, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.3);
 b1(1).FaceColor = color_lig{1};
@@ -206,7 +206,7 @@ end
 data = [ratio_each(:, 2), ratio_all];
 
 % Visualize figure
-figure('Position', [10 10 1200 500]);
+figure('Position', [10 10 200*length(rec)+200 500]);
 b = bar(1:length(rec), data, 'EdgeColor', 'none', 'BarWidth', 1);
 b(1).FaceColor = color_lig{1};
 b(2).FaceColor = color_lig{5};
