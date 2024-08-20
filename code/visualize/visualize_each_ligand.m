@@ -214,7 +214,7 @@ end
 data = [ratio_each, ratio_all];
 
 % Visualize figure
-figure('Position', [10 10 200*length(rec)+200 500]);
+figure('Position', [10 10 100*length(rec)+700 500]);
 b = bar(1:length(rec), data, 'EdgeColor', 'none', 'BarWidth', 1);
 b(1).FaceColor = color_lig{1};
 b(2).FaceColor = color_lig{5};
