@@ -1,7 +1,7 @@
 function [] = visualize_dynamics(time_stamp, result, result_foldername)
 %% Colors
 color_lig = {'#A4036F', '#54478C', '#048BA8', '#16DB93', '#EFEA5A', '#F29E4C'};
-color_rec = {'#729EA1', '#B5BD89', '#DFBE99', '#EC9192', '#DB5375'};
+color_rec = {'#8ecae6', '#219ebc', '#023047', '#ffb703', '#fb8500'};
 
 %% List of ligands and receptors
 lig = {'VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'};
