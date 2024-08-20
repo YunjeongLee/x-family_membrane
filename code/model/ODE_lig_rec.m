@@ -74,12 +74,36 @@ PDBB_PDRb = y(29);
 R1_N1 = y(30);
 
 %% Initialize the dydt
-dydt_names = strcat('d', params_struct.species_names);
-dydt_values = num2cell(zeros(length(y), 1));
-
-dydt_struct = cell2struct(dydt_values, dydt_names);
-
-assign_params(dydt_struct);
+dVA = 0;
+dVB = 0;
+dPl = 0;
+dPDAA = 0;
+dPDAB = 0;
+dPDBB = 0;
+dR1 = 0;
+dR2 = 0;
+dN1 = 0;
+dPDRa = 0;
+dPDRb = 0;
+dVA_R1 = 0;
+dVA_R2 = 0;
+dVA_N1 = 0;
+dVA_R2_N1 = 0;
+dVA_PDRa = 0;
+dVA_PDRb = 0;
+dVB_R1 = 0;
+dVB_N1 = 0;
+dPl_R1 = 0;
+dPl_N1 = 0;
+dPDAA_R2 = 0;
+dPDAA_PDRa = 0;
+dPDAB_R2 = 0;
+dPDAB_PDRa = 0;
+dPDAB_PDRb = 0;
+dPDBB_R2 = 0;
+dPDBB_PDRa = 0;
+dPDBB_PDRb = 0;
+dR1_N1 = 0;
 
 %% Define the ODE system
 %% VA + R1 <-> VA_R1
