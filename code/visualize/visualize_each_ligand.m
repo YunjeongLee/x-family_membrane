@@ -4,37 +4,37 @@ color_lig = {'#A4036F', '#54478C', '#048BA8', '#16DB93', '#EFEA5A', '#F29E4C'};
 color_rec = {'#729EA1', '#B5BD89', '#DFBE99', '#EC9192', '#DB5375'};
 
 %% Check which ligand was treated and set receptors and color for the plot
-if ~isempty(find(ind_VA, 1))
+if VA_exist ~= 0
     lig = 'VA';
     rec = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
     rec_lgd = {'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'};
     color_ligand = color_lig{1};
     color_receptor = color_rec;
-elseif ~isempty(find(ind_VB, 1))
+elseif VB_exist ~= 0
     lig = 'VB';
     rec = {'R1', 'N1'};
     rec_lig = {'VEGFR1', 'NRP1'};
     color_ligand = color_lig{2};
     color_receptor = color_rec([1, 3]);
-elseif ~isempty(find(ind_Pl, 1))
+elseif Pl_exist ~= 0
     lig = 'Pl';
     rec = {'R1', 'N1'};
     rec_lig = {'VEGFR1', 'NRP1'};
     color_ligand = color_lig{3};
     color_receptor = color_rec([1, 3]);
-elseif ~isempty(find(ind_PDAA, 1))
+elseif PDAA_exist ~= 0
     lig = 'PDAA';
     rec = {'R2', 'PDRa'};
     rec_lig = {'VEGFR2', 'PDGFR\alpha'};
     color_ligand = color_lig{4};
     color_receptor = color_rec([2, 4]);
-elseif ~isempty(find(ind_PDAB, 1))
+elseif PDAB_exist ~= 0
     lig = 'PDAB';
     rec = {'R2', 'PDRa', 'PDRb'};
     rec_lig = {'VEGFR2', 'PDGFR\alpha', 'PDGFR\beta'};
     color_ligand = color_lig{5};
     color_receptor = color_rec([2, 4, 5]);
-elseif ~isempty(find(ind_PDBB, 1))
+elseif PDBB_exist ~= 0
     lig = 'PDBB';
     rec = {'R2', 'PDRa', 'PDRb'};
     rec_lig = {'VEGFR2', 'PDGFR\alpha', 'PDGFR\beta'};
