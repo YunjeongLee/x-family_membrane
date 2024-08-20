@@ -163,7 +163,7 @@ ylim([0 100])
 ylabel('Proportion (%)')
 
 b2 = bar((1:length(rec)) + 0.2, ratio_all, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.3);
-b2(1).FaceColor = color_lig{2};
+b2(1).FaceColor = color_lig{3};
 b2(2).FaceColor = color_lig{6};
 for j = 1:size(ratio_all, 2)
     for i = 1:size(ratio_all, 1)
