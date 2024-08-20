@@ -188,6 +188,9 @@ for i = 1:length(rec)
     if strcmp(lig, 'VA') && strcmp(rec{i}, 'R2')
         complex = {[lig, '_', rec{i}], [lig, '_', rec{i}, '_N1']};
         lig_rec = result_all.(sprintf('%s', complex{1})) + result_all.(sprintf('%s', complex{2}));
+    elseif strcmp(lig, 'VA') && strcmp(rec{i}, 'N1')
+        complex = {[lig, '_', rec{i}], [lig, '_R2_', rec{i}]};
+        lig_rec = result_all.(sprintf('%s', complex{1})) + result_all.(sprintf('%s', complex{2}));
     else
         complex = [lig, '_', rec{i}];
         lig_rec = result_all.(sprintf('%s', complex));
