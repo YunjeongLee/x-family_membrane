@@ -113,7 +113,7 @@ data = [ratio_each; ratio_all];
 % Plot figure
 figure('Position', [10 10 600 400]);
 b = bar(1:2, data, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.5);
-b(1).FaceColor = color_lig{1};
+b(1).FaceColor = color_rec{1};
 b(2).FaceColor = color_rec{2};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
@@ -153,7 +153,7 @@ end
 figure('Position', [10 10 200*length(rec)+600 500]);
 hold on;
 b1 = bar((1:length(rec)) - 0.2, ratio_each, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.3);
-b1(1).FaceColor = color_lig{1};
+b1(1).FaceColor = color_rec{1};
 b1(2).FaceColor = color_rec{2};
 for j = 1:size(ratio_each, 2)
     for i = 1:size(ratio_each, 1)
@@ -171,7 +171,7 @@ ylim([0 100])
 ylabel('Proportion (%)')
 
 b2 = bar((1:length(rec)) + 0.2, ratio_all, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.3);
-b2(1).FaceColor = color_lig{3};
+b2(1).FaceColor = color_rec{4};
 b2(2).FaceColor = color_rec{5};
 for j = 1:size(ratio_all, 2)
     for i = 1:size(ratio_all, 1)
@@ -216,7 +216,7 @@ data = [ratio_each, ratio_all];
 % Visualize figure
 figure('Position', [10 10 100*length(rec)+700 500]);
 b = bar(1:length(rec), data, 'EdgeColor', 'none', 'BarWidth', 1);
-b(1).FaceColor = color_lig{1};
+b(1).FaceColor = color_rec{2};
 b(2).FaceColor = color_rec{5};
 for i = 1:size(data, 1)
     text(i, data(i, 2)+3, sprintf('%.2f', data(i, 2)), 'FontSize', 20, 'Color', 'k');
