@@ -204,7 +204,7 @@ for i = 1:length(rec)
     ratio_each(i) = lig_rec_each(end)/bound_rec_each(end) * 100;
     ratio_all(i) = lig_rec(end)/bound_rec_all(end) * 100;
 end
-data = [ratio_each(:, 2), ratio_all];
+data = [ratio_each, ratio_all];
 
 % Visualize figure
 figure('Position', [10 10 200*length(rec)+200 500]);
