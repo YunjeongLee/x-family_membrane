@@ -225,7 +225,7 @@ end
 xticklabels(rec_lgd)
 legend({sprintf('%s-treated', lig), 'All ligands'}, 'Location', 'northeastoutside')
 xlim([0 length(rec)+1])
-ylim([0 70])
+ylim([0 100])
 ylabel('Proportion (%)')
 set(gca, 'fontsize', 25)
 saveas(gca, sprintf('%s/Receptor_free_VS_bound_%s', result_foldername, lig), 'png')
