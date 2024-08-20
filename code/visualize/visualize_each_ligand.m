@@ -118,9 +118,9 @@ b(2).FaceColor = color_rec{2};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
             if j ~= 2
-                text(i-0.2, sum(data(i, 1:j))+3, sprintf('%.2f', data(i, j)), 'FontSize', 20, 'Color', 'w');
+                text(i-0.2, sum(data(i, 1:j))+3, sprintf('%.2f', data(i, j)), 'FontSize', 20, 'Color', 'k');
             else
-                text(i-0.2, sum(data(i, 1:j))-5, sprintf('%.2f', data(i, j)), 'FontSize', 20, 'Color', 'w');
+                text(i-0.2, sum(data(i, 1:j))-5, sprintf('%.2f', data(i, j)), 'FontSize', 20, 'Color', 'k');
             end
     end
 end
@@ -158,9 +158,9 @@ b1(2).FaceColor = color_rec{2};
 for j = 1:size(ratio_each, 2)
     for i = 1:size(ratio_each, 1)
             if j ~= 2
-                text(i-0.2-0.14, 3, sprintf('%.2f', ratio_each(i, j)), 'FontSize', 20, 'Color', 'w');
+                text(i-0.2-0.14, 3, sprintf('%.2f', ratio_each(i, j)), 'FontSize', 20, 'Color', 'k');
             else
-                text(i-0.2-0.14, sum(ratio_each(i, 1:j))-3, sprintf('%.2f', ratio_each(i, j)), 'FontSize', 20, 'Color', 'w');
+                text(i-0.2-0.14, sum(ratio_each(i, 1:j))-3, sprintf('%.2f', ratio_each(i, j)), 'FontSize', 20, 'Color', 'k');
             end
     end
 end
@@ -176,9 +176,9 @@ b2(2).FaceColor = color_rec{5};
 for j = 1:size(ratio_all, 2)
     for i = 1:size(ratio_all, 1)
             if j ~= 2
-                text(i+0.2-0.14, 3, sprintf('%.2f', ratio_all(i, j)), 'FontSize', 20, 'Color', 'w');
+                text(i+0.2-0.14, 3, sprintf('%.2f', ratio_all(i, j)), 'FontSize', 20, 'Color', 'k');
             else
-                text(i+0.2-0.14, sum(ratio_all(i, 1:j))-3, sprintf('%.2f', ratio_all(i, j)), 'FontSize', 20, 'Color', 'w');
+                text(i+0.2-0.14, sum(ratio_all(i, 1:j))-3, sprintf('%.2f', ratio_all(i, j)), 'FontSize', 20, 'Color', 'k');
             end
     end
 end
