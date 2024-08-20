@@ -42,10 +42,36 @@ konR1N1 = params_struct.konR1N1;
 koffR1N1 = params_struct.koffR1N1;
 
 %% Distribute y
-y_cell = num2cell(y);
-y_struct = cell2struct(y_cell, params_struct.species_names);
-
-assign_params(y_struct);
+VA = y(1);
+VB = y(2);
+Pl = y(3);
+PDAA = y(4);
+PDAB = y(5);
+PDBB = y(6);
+R1 = y(7);
+R2 = y(8);
+N1 = y(9);
+PDRa = y(10);
+PDRb = y(11);
+VA_R1 = y(12);
+VA_R2 = y(13);
+VA_N1 = y(14);
+VA_R2_N1 = y(15);
+VA_PDRa = y(16);
+VA_PDRb = y(17);
+VB_R1 = y(18);
+VB_N1 = y(19);
+Pl_R1 = y(20);
+Pl_N1 = y(21);
+PDAA_R2 = y(22);
+PDAA_PDRa = y(23);
+PDAB_R2 = y(24);
+PDAB_PDRa = y(25);
+PDAB_PDRb = y(26);
+PDBB_R2 = y(27);
+PDBB_PDRa = y(28);
+PDBB_PDRb = y(29);
+R1_N1 = y(30);
 
 %% Initialize the dydt
 dydt_names = strcat('d', params_struct.species_names);
