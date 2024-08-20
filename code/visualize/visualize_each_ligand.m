@@ -157,6 +157,7 @@ for j = 1:size(ratio_each, 2)
             end
     end
 end
+xticks(1:length(rec))
 xticklabels(rec_lgd)
 xlim([0 length(rec)+1])
 ylim([0 100])
