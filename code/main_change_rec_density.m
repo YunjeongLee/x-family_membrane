@@ -123,5 +123,5 @@ for i = 1:length(rec)
     %% Visualization -- Ligand distribution
     filename = sprintf('%s/lig_dist', result_foldername);
     visualize_stack_area(lig_dist{i}, rec_density, color_lig_dist, ...
-                         rec_lgd, xtick, rec_lgd{i}, lig_lgd, filename)
+                         rec_lgd, xtick, rec_lgd{i}, [lig_lgd, {sprintf('Base = %d', default)}], filename)
 end
