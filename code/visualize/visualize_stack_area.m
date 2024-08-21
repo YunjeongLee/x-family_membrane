@@ -1,4 +1,4 @@
-function [] = visualize_stack_area(data, xrange, color, ttl, xtick, xlabels, lgd, filename)
+function [] = visualize_stack_area(data, default, xrange, color, ttl, xtick, xlabels, lgd, filename)
 figure('Position', [10 10 1600 500]);
 for i = 1:size(data, 3)
     subplot(2, 3, i);
