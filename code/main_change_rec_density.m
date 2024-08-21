@@ -112,16 +112,16 @@ for i = 1:length(rec)
     %% Visualization -- Free vs. bound ligand
     lgd = {'Free', 'Bound', sprintf('Base = %d', default)};
     filename = sprintf('%s/free_vs_bound_lig', result_foldername);
-    visualize_stack_area(free_vs_bound_lig{i}, rec_density, color_free_vs_bound, ...
+    visualize_stack_area(free_vs_bound_lig{i}, default, rec_density, color_free_vs_bound, ...
                          lig_lgd, xtick, rec_lgd{i}, lgd, filename)
 
     %% Visualization -- Free vs. bound receptor
     filename = sprintf('%s/free_vs_bound_rec', result_foldername);
-    visualize_stack_area(free_vs_bound_rec{i}, rec_density, color_free_vs_bound, ...
+    visualize_stack_area(free_vs_bound_rec{i}, default, rec_density, color_free_vs_bound, ...
                          rec_lgd, xtick, rec_lgd{i}, lgd, filename)
 
     %% Visualization -- Ligand distribution
     filename = sprintf('%s/lig_dist', result_foldername);
-    visualize_stack_area(lig_dist{i}, rec_density, color_lig_dist, ...
+    visualize_stack_area(lig_dist{i}, default, rec_density, color_lig_dist, ...
                          rec_lgd, xtick, rec_lgd{i}, [lig_lgd, {sprintf('Base = %d', default)}], filename)
 end
