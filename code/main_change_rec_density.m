@@ -110,7 +110,7 @@ for i = 1:length(rec)
     end
 
     %% Visualization -- Free vs. bound ligand
-    lgd = {'Free', 'Bound'};
+    lgd = {'Free', 'Bound', sprintf('Base = %d', default)};
     filename = sprintf('%s/free_vs_bound_lig', result_foldername);
     visualize_stack_area(free_vs_bound_lig{i}, rec_density, color_free_vs_bound, ...
                          lig_lgd, xtick, rec_lgd{i}, lgd, filename)
