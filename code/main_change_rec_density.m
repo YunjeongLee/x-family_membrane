@@ -100,6 +100,9 @@ end
 %% Visualization
 xtick = [1e3, 1e4:3e4:1e5];
 for i = 1:length(rec)
+    %% Define the default value of receptors
+    default = params_raw{strcmp(params_raw.Parameter, rec{i}), 'value'};
+
     %% Generate results folder
     result_foldername = sprintf('results/all_ligand/change_rec_density/%s', rec{i});
     if ~exist(result_foldername, 'dir')
