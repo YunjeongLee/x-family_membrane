@@ -34,6 +34,9 @@ ylab = 'pM';
 filename = 'dynamics_free_vs_bound_lig';
 plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, false, result_foldername, filename)
 
+% Short time
+filename = 'short_dynamics_free_vs_bound_lig';
+plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, true, result_foldername, filename)
 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
