@@ -22,6 +22,13 @@ end
 
 %% Plot free vs. bound ligand
 lig_list = {'VA', 'VB', 'Pl', 'PDAA', 'PDAB', 'PDBB'};
+data_free = zeros(length(result.VA_free), length(lig_list));
+data_bound = zeros(length(result.VA_free), length(lig_list));
+for i = 1:length(lig_list)
+    data_free(:, i) = result.(sprintf('%s_free', lig_list{i})) * 1e12;
+    data_bound(:, i) = result.(sprintf('%s_bound', lig_list{i})) * 1e12;
+end
+
 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
