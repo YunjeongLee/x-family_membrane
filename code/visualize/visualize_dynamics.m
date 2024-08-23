@@ -79,6 +79,13 @@ ylab = 'pM';
 lgd = {'VEGF-A', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'};
 color = color_lig([1, 4:6]);
 
+% Long time
+filename = 'dynamics_lig_dist_R2';
+plot_bound(time_stamp, data, ylab, lgd, color, false, result_foldername, filename);
+
+% Short time
+filename = 'short_dynamics_lig_dist_R2';
+plot_bound(time_stamp, data, ylab, lgd, color, true, result_foldername, filename);
 
 %% Plot bound ligand to NRP1
 figure('Position', [10 10 800 400])
