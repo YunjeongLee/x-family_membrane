@@ -43,6 +43,13 @@ avogadro = 6.02214e23; % Molecule/mol
 EC_vol = 1e-12; % Liter
 rec_list = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
 
+data_free = zeros(length(result.VA_free), length(rec_list));
+data_bound = zeros(length(result.VA_free), length(rec_list));
+for i = 1:length(rec_list)
+    data_free(:, i) = result.(sprintf('%s_free', rec_list{i})) * avogadro * EC_vol;
+    data_bound(:, i) = result.(sprintf('%s_bound', rec_list{i})) * avogadro * EC_vol;
+end
+
 
 %% Plot bound ligand to VEGFR1
 figure('Position', [10 10 800 400])
