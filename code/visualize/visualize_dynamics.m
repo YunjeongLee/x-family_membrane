@@ -37,7 +37,7 @@ plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_lig, color_l
 % Short time
 interest = 60*60+1;
 filename = 'short_dynamics_free_vs_bound_lig';
-plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
+plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
@@ -59,7 +59,7 @@ plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_rec, color_r
 % Short time
 interest = 5*60+1;
 filename = 'short_dynamics_free_vs_bound_rec';
-plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
+plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
 
 %% Plot bound ligand to VEGFR1
 data = [result.VA_R1, result.VB_R1, result.Pl_R1] * 1e12;
@@ -74,7 +74,7 @@ plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 % Short time
 interest = 5*60+1;
 filename = 'short_dynamics_lig_dist_R1';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 %% Plot bound ligand to VEGFR2
 data = [(result.VA_R2 + result.VA_R2_N1), result.PDAA_R2, result.PDAB_R2, result.PDBB_R2] * 1e12;
@@ -89,7 +89,7 @@ plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 % Short time
 interest = 40*60+1;
 filename = 'short_dynamics_lig_dist_R2';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 %% Plot bound ligand to NRP1
 data = [(result.VA_N1 + result.VA_R2_N1), result.VB_N1, result.Pl_N1] * 1e12;
@@ -104,7 +104,7 @@ plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 % Short time
 interest = 5*60+1;
 filename = 'short_dynamics_lig_dist_N1';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 %% Plot bound ligand to PDGFRa
 data = [result.VA_PDRa, result.PDAA_PDRa, result.PDAB_PDRa, result.PDBB_PDRa] * 1e12;
@@ -119,7 +119,7 @@ plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 % Short time
 interest = 60*60+1;
 filename = 'short_dynamics_lig_dist_PDRa';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 %% Plot bound ligand to PDGFRb
 data = [result.VA_PDRb, result.PDAB_PDRb, result.PDBB_PDRb] * 1e12;
@@ -134,7 +134,7 @@ plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 % Short time
 interest = 60*60+1;
 filename = 'short_dynamics_lig_dist_PDRb';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 end
 
