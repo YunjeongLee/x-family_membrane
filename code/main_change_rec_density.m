@@ -22,7 +22,7 @@ time_stamp = 0:3600:3600*24*10;
 lig_lgd = {'VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'};
 rec_lgd = {'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'};
 rec = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
-rec_density = 1000:100:1e5;
+rec_density = 0:100:1e5;
 
 color_free_vs_bound = {'#8ecae6', '#219ebc'};
 color_lig_dist = {'#ff595e', '#ff924c', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'};
