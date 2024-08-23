@@ -149,3 +149,6 @@ legend('VEGF-A', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside')
 set(gca, 'fontsize', 25);
 saveas(gca, sprintf('%s/dynamics_lig_dist_PDRb', result_foldername), 'epsc')
 saveas(gca, sprintf('%s/dynamics_lig_dist_PDRb', result_foldername), 'png')
+
+end
+
