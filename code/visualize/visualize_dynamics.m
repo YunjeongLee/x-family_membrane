@@ -60,18 +60,6 @@ filename = 'short_dynamics_free_vs_bound_rec';
 plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, true, result_foldername, filename)
 
 %% Plot bound ligand to VEGFR1
-figure('Position', [10 10 800 400])
-hold on;
-plot(time_stamp/3600, result.VA_R1 * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.VB_R1 * 1e12, 'Color', color_lig{2}, 'LineWidth', 3);
-plot(time_stamp/3600, result.Pl_R1 * 1e12, 'Color', color_lig{3}, 'LineWidth', 3);
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend('VEGF-A', 'VEGF-B', 'PlGF', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_lig_dist_R1', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_lig_dist_R1', result_foldername), 'png')
 
 %% Plot bound ligand to VEGFR2
 figure('Position', [10 10 800 400])
