@@ -43,30 +43,6 @@ avogadro = 6.02214e23; % Molecule/mol
 EC_vol = 1e-12; % Liter
 rec_list = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
 
-figure('Position', [10 10 800 400])
-hold on;
-% VEGFR1
-plot(time_stamp/3600, result.R1_free * avogadro * EC_vol, 'Color', color_rec{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.R1_bound * avogadro * EC_vol, 'Color', color_rec{1}, 'LineWidth', 3, 'LineStyle', '--');
-% VEGFR2
-plot(time_stamp/3600, result.R2_free * avogadro * EC_vol, 'Color', color_rec{2}, 'LineWidth', 3);
-plot(time_stamp/3600, result.R2_bound * avogadro * EC_vol, 'Color', color_rec{2}, 'LineWidth', 3, 'LineStyle', '--');
-% NRP1
-plot(time_stamp/3600, result.N1_free * avogadro * EC_vol, 'Color', color_rec{3}, 'LineWidth', 3);
-plot(time_stamp/3600, result.N1_bound * avogadro * EC_vol, 'Color', color_rec{3}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGFRa
-plot(time_stamp/3600, result.PDRa_free * avogadro * EC_vol, 'Color', color_rec{4}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDRa_bound * avogadro * EC_vol, 'Color', color_rec{4}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGFRb
-plot(time_stamp/3600, result.PDRb_free * avogadro * EC_vol, 'Color', color_rec{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDRb_bound * avogadro * EC_vol, 'Color', color_rec{5}, 'LineWidth', 3, 'LineStyle', '--');
-hold off;
-xlabel('Time (hour)')
-ylabel('Receptors/cell')
-legend(lgd_rec, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_free_vs_bound_rec', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_free_vs_bound_rec', result_foldername), 'png')
 
 %% Plot bound ligand to VEGFR1
 figure('Position', [10 10 800 400])
