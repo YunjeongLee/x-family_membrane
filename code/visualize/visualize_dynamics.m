@@ -65,6 +65,13 @@ ylab = 'pM';
 lgd = {'VEGF-A', 'VEGF-B', 'PlGF'};
 color = color_lig(1:3);
 
+% Long time
+filename = 'dynamics_lig_dist_R1';
+plot_bound(time_stamp, data, ylab, lgd, color, false, result_foldername, filename);
+
+% Short time
+filename = 'short_dynamics_lig_dist_R1';
+plot_bound(time_stamp, data, ylab, lgd, color, true, result_foldername, filename);
 
 %% Plot bound ligand to VEGFR2
 figure('Position', [10 10 800 400])
