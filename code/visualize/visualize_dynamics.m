@@ -32,11 +32,11 @@ end
 % Long time
 ylab = 'pM';
 filename = 'dynamics_free_vs_bound_lig';
-plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, false, result_foldername, filename)
+plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
 % Short time
 filename = 'short_dynamics_free_vs_bound_lig';
-plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, true, result_foldername, filename)
+plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
@@ -53,11 +53,11 @@ end
 % Long time
 ylab = 'Receptors/cell';
 filename = 'dynamics_free_vs_bound_rec';
-plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, false, result_foldername, filename)
+plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
 
 % Short time
 filename = 'short_dynamics_free_vs_bound_rec';
-plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, true, result_foldername, filename)
+plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
 
 %% Plot bound ligand to VEGFR1
 data = [result.VA_R1, result.VB_R1, result.Pl_R1] * 1e12;
