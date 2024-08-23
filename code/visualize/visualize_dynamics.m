@@ -55,6 +55,9 @@ ylab = 'Receptors/cell';
 filename = 'dynamics_free_vs_bound_rec';
 plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, false, result_foldername, filename)
 
+% Short time
+filename = 'short_dynamics_free_vs_bound_rec';
+plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, true, result_foldername, filename)
 
 %% Plot bound ligand to VEGFR1
 figure('Position', [10 10 800 400])
