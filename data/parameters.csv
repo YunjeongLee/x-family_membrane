@@ -6,10 +6,10 @@ PDAA,Concentration of PDGF-AA,1.000E-09,M,Assumed
 PDAB,Concentration of PDGF-AB,1.000E-09,M,Assumed
 PDBB,Concentration of PDGF-BB,1.000E-09,M,Assumed
 R1,VEGFR1 density on endothelial cell,1.604E+03,molecule/cell,In-house data (Cheri)
-R2,VEGFR2 density on endothelial cell,4.094E+03,molecule/cell,In-house data (Cheri)
+R2,VEGFR2 density on endothelial cell,4.095E+03,molecule/cell,In-house data (Cheri)
 N1,NRP1 density on endothelial cell,4.409E+04,molecule/cell,"Chen et al., 2015"
-PDRa,PDGFRα density on endothelial cell,5.002E+03,molecule/cell,In-house data (Cheri)
-PDRb,PDGFRβ density on endothelilal cell,5.340E+03,molecule/cell,In-house data (Cheri)
+PDRa,PDGFRα density on endothelial cell,5.001E+03,molecule/cell,In-house data (Cheri)
+PDRb,PDGFRβ density on endothelilal cell,5.341E+03,molecule/cell,In-house data (Cheri)
 VA_R1,Concentration of VEGF-A:VEGFR1,0.000E+00,M,Assumed
 VA_R2,Concentration of VEGF-A:VEGFR2,0.000E+00,M,Assumed
 VA_N1,Concentration of VEGF-A:NRP1,0.000E+00,M,Assumed
