@@ -29,6 +29,11 @@ for i = 1:length(lig_list)
     data_bound(:, i) = result.(sprintf('%s_bound', lig_list{i})) * 1e12;
 end
 
+% Long time
+ylab = 'pM';
+filename = 'dynamics_free_vs_bound_lig';
+plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, false, result_foldername, filename)
+
 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
