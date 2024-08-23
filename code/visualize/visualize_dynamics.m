@@ -41,6 +41,7 @@ plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
 EC_vol = 1e-12; % Liter
+rec_list = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
 
 figure('Position', [10 10 800 400])
 hold on;
