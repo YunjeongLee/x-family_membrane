@@ -72,7 +72,7 @@ filename = 'dynamics_lig_dist_R1';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
-interest = 5*60+1;
+interest = 60*60*12+1;
 filename = 'short_dynamics_lig_dist_R1';
 plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
@@ -87,7 +87,7 @@ filename = 'dynamics_lig_dist_R2';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
-interest = 40*60+1;
+interest = 60*60+1;
 filename = 'short_dynamics_lig_dist_R2';
 plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
@@ -102,7 +102,7 @@ filename = 'dynamics_lig_dist_N1';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
-interest = 5*60+1;
+interest = 20*60+1;
 filename = 'short_dynamics_lig_dist_N1';
 plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
@@ -117,7 +117,7 @@ filename = 'dynamics_lig_dist_PDRa';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
-interest = 60*60+1;
+interest = 60*60*4+1;
 filename = 'short_dynamics_lig_dist_PDRa';
 plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
@@ -132,7 +132,7 @@ filename = 'dynamics_lig_dist_PDRb';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
-interest = 60*60+1;
+interest = 60*60*2+1;
 filename = 'short_dynamics_lig_dist_PDRb';
 plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
