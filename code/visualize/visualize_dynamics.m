@@ -32,7 +32,7 @@ end
 % Long time
 ylab = 'pM';
 filename = 'dynamics_free_vs_bound_lig';
-plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
+plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
 % Short time
 filename = 'short_dynamics_free_vs_bound_lig';
@@ -53,7 +53,7 @@ end
 % Long time
 ylab = 'Receptors/cell';
 filename = 'dynamics_free_vs_bound_rec';
-plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
+plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
 
 % Short time
 filename = 'short_dynamics_free_vs_bound_rec';
@@ -67,7 +67,7 @@ color = color_lig(1:3);
 
 % Long time
 filename = 'dynamics_lig_dist_R1';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
 filename = 'short_dynamics_lig_dist_R1';
@@ -81,7 +81,7 @@ color = color_lig([1, 4:6]);
 
 % Long time
 filename = 'dynamics_lig_dist_R2';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
 filename = 'short_dynamics_lig_dist_R2';
@@ -95,7 +95,7 @@ color = color_lig(1:3);
 
 % Long time
 filename = 'dynamics_lig_dist_N1';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
 filename = 'short_dynamics_lig_dist_N1';
@@ -109,7 +109,7 @@ color = color_lig([1, 4:6]);
 
 % Long time
 filename = 'dynamics_lig_dist_PDRa';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
 filename = 'short_dynamics_lig_dist_PDRa';
@@ -123,7 +123,7 @@ color = color_lig([1, 5:6]);
 
 % Long time
 filename = 'dynamics_lig_dist_PDRb';
-plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
 filename = 'short_dynamics_lig_dist_PDRb';
