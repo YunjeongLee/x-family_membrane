@@ -21,33 +21,6 @@ for i = 1:length(rec)
 end
 
 %% Plot free vs. bound ligand
-figure('Position', [10 10 800 400])
-hold on;
-% VEGF-A
-plot(time_stamp/3600, result.VA_free * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.VA_bound * 1e12, 'Color', color_lig{1}, 'LineWidth', 3, 'LineStyle', '--');
-% VEGF-B
-plot(time_stamp/3600, result.VB_free * 1e12, 'Color', color_lig{2}, 'LineWidth', 3);
-plot(time_stamp/3600, result.VB_bound * 1e12, 'Color', color_lig{2}, 'LineWidth', 3, 'LineStyle', '--');
-% PlGF
-plot(time_stamp/3600, result.Pl_free * 1e12, 'Color', color_lig{3}, 'LineWidth', 3);
-plot(time_stamp/3600, result.Pl_bound * 1e12, 'Color', color_lig{3}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGF-AA
-plot(time_stamp/3600, result.PDAA_free * 1e12, 'Color', color_lig{4}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAA_bound * 1e12, 'Color', color_lig{4}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGF-AB
-plot(time_stamp/3600, result.PDAB_free * 1e12, 'Color', color_lig{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAB_bound * 1e12, 'Color', color_lig{5}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGF-BB
-plot(time_stamp/3600, result.PDBB_free * 1e12, 'Color', color_lig{6}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDBB_bound * 1e12, 'Color', color_lig{6}, 'LineWidth', 3, 'LineStyle', '--');
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend(lgd_lig, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_free_vs_bound_lig', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_free_vs_bound_lig', result_foldername), 'png')
 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
