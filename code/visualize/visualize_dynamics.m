@@ -21,6 +21,7 @@ for i = 1:length(rec)
 end
 
 %% Plot free vs. bound ligand
+lig_list = {'VA', 'VB', 'Pl', 'PDAA', 'PDAB', 'PDBB'};
 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
