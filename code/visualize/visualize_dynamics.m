@@ -116,6 +116,11 @@ filename = 'short_dynamics_lig_dist_PDRa';
 plot_bound(time_stamp, data, ylab, lgd, color, true, result_foldername, filename);
 
 %% Plot bound ligand to PDGFRb
+data = [result.VA_PDRb, result.PDAB_PDRb, result.PDBB_PDRb] * 1e12;
+ylab = 'pM';
+lgd = {'VEGF-A', 'PDGF-AB', 'PDGF-BB'};
+color = color_lig([1, 5:6]);
+
 
 end
 
