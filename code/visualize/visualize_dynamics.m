@@ -60,6 +60,11 @@ filename = 'short_dynamics_free_vs_bound_rec';
 plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, true, result_foldername, filename)
 
 %% Plot bound ligand to VEGFR1
+data = [result.VA_R1, result.VB_R1, result.Pl_R1] * 1e12;
+ylab = 'pM';
+lgd = {'VEGF-A', 'VEGF-B', 'PlGF'};
+color = color_lig(1:3);
+
 
 %% Plot bound ligand to VEGFR2
 figure('Position', [10 10 800 400])
