@@ -181,3 +181,31 @@ saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
 end
+
+function [] = plot_bound(time_stamp, data, ylab, lgd, color, flag_short, result_foldername, filename)
+% If you are going to plot only short time
+if flag_short
+    interest = 61;
+    time_stamp = time_stamp(1:interest)/60;
+    data = data(1:interest, :);
+    xlab = 'Time (min)';
+else
+    time_stamp = time_stamp/3600;
+    xlab = 'Time (hour)';
+end
+
+% Plot
+figure('Position', [10 10 800 400])
+hold on;
+for i = 1:size(data, 2)
+    plot(time_stamp, data(:, i), 'Color', color{i}, 'LineWidth', 3);
+end
+hold off;
+xlabel(xlab)
+ylabel(ylab)
+legend(lgd, 'Location', 'northeastoutside')
+set(gca, 'fontsize', 25);
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
+
+end
