@@ -131,7 +131,7 @@ plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
 
 end
 
-function [] = plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd, color, result_foldername, filename)
+function [] = plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd, color, result_foldername, filename)
 % If you are going to plot only short time
 if flag_short
     interest = 61;
@@ -161,7 +161,7 @@ saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
 end
 
-function [] = plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename)
+function [] = plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename)
 % If you are going to plot only short time
 if flag_short
     interest = 61;
