@@ -21,131 +21,175 @@ for i = 1:length(rec)
 end
 
 %% Plot free vs. bound ligand
-figure('Position', [10 10 800 400])
-hold on;
-% VEGF-A
-plot(time_stamp/3600, result.VA_free * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.VA_bound * 1e12, 'Color', color_lig{1}, 'LineWidth', 3, 'LineStyle', '--');
-% VEGF-B
-plot(time_stamp/3600, result.VB_free * 1e12, 'Color', color_lig{2}, 'LineWidth', 3);
-plot(time_stamp/3600, result.VB_bound * 1e12, 'Color', color_lig{2}, 'LineWidth', 3, 'LineStyle', '--');
-% PlGF
-plot(time_stamp/3600, result.Pl_free * 1e12, 'Color', color_lig{3}, 'LineWidth', 3);
-plot(time_stamp/3600, result.Pl_bound * 1e12, 'Color', color_lig{3}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGF-AA
-plot(time_stamp/3600, result.PDAA_free * 1e12, 'Color', color_lig{4}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAA_bound * 1e12, 'Color', color_lig{4}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGF-AB
-plot(time_stamp/3600, result.PDAB_free * 1e12, 'Color', color_lig{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAB_bound * 1e12, 'Color', color_lig{5}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGF-BB
-plot(time_stamp/3600, result.PDBB_free * 1e12, 'Color', color_lig{6}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDBB_bound * 1e12, 'Color', color_lig{6}, 'LineWidth', 3, 'LineStyle', '--');
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend(lgd_lig, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_free_vs_bound_lig', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_free_vs_bound_lig', result_foldername), 'png')
+lig_list = {'VA', 'VB', 'Pl', 'PDAA', 'PDAB', 'PDBB'};
+data_free = zeros(length(result.VA_free), length(lig_list));
+data_bound = zeros(length(result.VA_free), length(lig_list));
+for i = 1:length(lig_list)
+    data_free(:, i) = result.(sprintf('%s_free', lig_list{i})) * 1e12;
+    data_bound(:, i) = result.(sprintf('%s_bound', lig_list{i})) * 1e12;
+end
+
+% Long time
+ylab = 'pM';
+filename = 'dynamics_free_vs_bound_lig';
+plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
+
+% Short time
+interest = 60*60+1;
+filename = 'short_dynamics_free_vs_bound_lig';
+plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
 %% Plot free vs. bound receptor
 avogadro = 6.02214e23; % Molecule/mol
 EC_vol = 1e-12; % Liter
+rec_list = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
 
-figure('Position', [10 10 800 400])
-hold on;
-% VEGFR1
-plot(time_stamp/3600, result.R1_free * avogadro * EC_vol, 'Color', color_rec{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.R1_bound * avogadro * EC_vol, 'Color', color_rec{1}, 'LineWidth', 3, 'LineStyle', '--');
-% VEGFR2
-plot(time_stamp/3600, result.R2_free * avogadro * EC_vol, 'Color', color_rec{2}, 'LineWidth', 3);
-plot(time_stamp/3600, result.R2_bound * avogadro * EC_vol, 'Color', color_rec{2}, 'LineWidth', 3, 'LineStyle', '--');
-% NRP1
-plot(time_stamp/3600, result.N1_free * avogadro * EC_vol, 'Color', color_rec{3}, 'LineWidth', 3);
-plot(time_stamp/3600, result.N1_bound * avogadro * EC_vol, 'Color', color_rec{3}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGFRa
-plot(time_stamp/3600, result.PDRa_free * avogadro * EC_vol, 'Color', color_rec{4}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDRa_bound * avogadro * EC_vol, 'Color', color_rec{4}, 'LineWidth', 3, 'LineStyle', '--');
-% PDGFRb
-plot(time_stamp/3600, result.PDRb_free * avogadro * EC_vol, 'Color', color_rec{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDRb_bound * avogadro * EC_vol, 'Color', color_rec{5}, 'LineWidth', 3, 'LineStyle', '--');
-hold off;
-xlabel('Time (hour)')
-ylabel('Receptors/cell')
-legend(lgd_rec, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_free_vs_bound_rec', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_free_vs_bound_rec', result_foldername), 'png')
+data_free = zeros(length(result.VA_free), length(rec_list));
+data_bound = zeros(length(result.VA_free), length(rec_list));
+for i = 1:length(rec_list)
+    data_free(:, i) = result.(sprintf('%s_free', rec_list{i})) * avogadro * EC_vol;
+    data_bound(:, i) = result.(sprintf('%s_bound', rec_list{i})) * avogadro * EC_vol;
+end
+
+% Long time
+ylab = 'Receptors/cell';
+filename = 'dynamics_free_vs_bound_rec';
+plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
+
+% Short time
+interest = 5*60+1;
+filename = 'short_dynamics_free_vs_bound_rec';
+plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
 
 %% Plot bound ligand to VEGFR1
-figure('Position', [10 10 800 400])
-hold on;
-plot(time_stamp/3600, result.VA_R1 * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.VB_R1 * 1e12, 'Color', color_lig{2}, 'LineWidth', 3);
-plot(time_stamp/3600, result.Pl_R1 * 1e12, 'Color', color_lig{3}, 'LineWidth', 3);
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend('VEGF-A', 'VEGF-B', 'PlGF', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_lig_dist_R1', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_lig_dist_R1', result_foldername), 'png')
+data = [result.VA_R1, result.VB_R1, result.Pl_R1] * 1e12;
+ylab = 'pM';
+lgd = {'VEGF-A', 'VEGF-B', 'PlGF'};
+color = color_lig(1:3);
+
+% Long time
+filename = 'dynamics_lig_dist_R1';
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
+
+% Short time
+interest = 60*60*12+1;
+filename = 'short_dynamics_lig_dist_R1';
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 %% Plot bound ligand to VEGFR2
-figure('Position', [10 10 800 400])
-hold on;
-plot(time_stamp/3600, (result.VA_R2 + result.VA_R2_N1) * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAA_R2 * 1e12, 'Color', color_lig{4}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAB_R2 * 1e12, 'Color', color_lig{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDBB_R2 * 1e12, 'Color', color_lig{6}, 'LineWidth', 3);
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend('VEGF-A', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_lig_dist_R2', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_lig_dist_R2', result_foldername), 'png')
+data = [(result.VA_R2 + result.VA_R2_N1), result.PDAA_R2, result.PDAB_R2, result.PDBB_R2] * 1e12;
+ylab = 'pM';
+lgd = {'VEGF-A', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'};
+color = color_lig([1, 4:6]);
+
+% Long time
+filename = 'dynamics_lig_dist_R2';
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
+
+% Short time
+interest = 60*60+1;
+filename = 'short_dynamics_lig_dist_R2';
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 %% Plot bound ligand to NRP1
-figure('Position', [10 10 800 400])
-hold on;
-plot(time_stamp/3600, (result.VA_N1 + result.VA_R2_N1) * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.VB_N1 * 1e12, 'Color', color_lig{2}, 'LineWidth', 3);
-plot(time_stamp/3600, result.Pl_N1 * 1e12, 'Color', color_lig{3}, 'LineWidth', 3);
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend('VEGF-A', 'VEGF-B', 'PlGF', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_lig_dist_N1', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_lig_dist_N1', result_foldername), 'png')
+data = [(result.VA_N1 + result.VA_R2_N1), result.VB_N1, result.Pl_N1] * 1e12;
+ylab = 'pM';
+lgd = {'VEGF-A', 'VEGF-B', 'PlGF'};
+color = color_lig(1:3);
+
+% Long time
+filename = 'dynamics_lig_dist_N1';
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
+
+% Short time
+interest = 20*60+1;
+filename = 'short_dynamics_lig_dist_N1';
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 %% Plot bound ligand to PDGFRa
-figure('Position', [10 10 800 400])
-hold on;
-plot(time_stamp/3600, result.VA_PDRa * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAA_PDRa * 1e12, 'Color', color_lig{4}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAB_PDRa * 1e12, 'Color', color_lig{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDBB_PDRa * 1e12, 'Color', color_lig{6}, 'LineWidth', 3);
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend('VEGF-A', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_lig_dist_PDRa', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_lig_dist_PDRa', result_foldername), 'png')
+data = [result.VA_PDRa, result.PDAA_PDRa, result.PDAB_PDRa, result.PDBB_PDRa] * 1e12;
+ylab = 'pM';
+lgd = {'VEGF-A', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'};
+color = color_lig([1, 4:6]);
+
+% Long time
+filename = 'dynamics_lig_dist_PDRa';
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
+
+% Short time
+interest = 60*60*4+1;
+filename = 'short_dynamics_lig_dist_PDRa';
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
 
 %% Plot bound ligand to PDGFRb
+data = [result.VA_PDRb, result.PDAB_PDRb, result.PDBB_PDRb] * 1e12;
+ylab = 'pM';
+lgd = {'VEGF-A', 'PDGF-AB', 'PDGF-BB'};
+color = color_lig([1, 5:6]);
+
+% Long time
+filename = 'dynamics_lig_dist_PDRb';
+plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
+
+% Short time
+interest = 60*60*2+1;
+filename = 'short_dynamics_lig_dist_PDRb';
+plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename);
+
+end
+
+function [] = plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd, color, result_foldername, filename)
+% If you are going to plot only short time
+if ~isempty(interest)
+    time_stamp = time_stamp(1:interest)/60;
+    data_free = data_free(1:interest, :);
+    data_bound = data_bound(1:interest, :);
+    xlab = 'Time (min)';
+else
+    time_stamp = time_stamp/3600;
+    xlab = 'Time (hour)';
+end
+
+% Plot
 figure('Position', [10 10 800 400])
 hold on;
-plot(time_stamp/3600, result.VA_PDRb * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAB_PDRb * 1e12, 'Color', color_lig{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDBB_PDRb * 1e12, 'Color', color_lig{6}, 'LineWidth', 3);
+for i = 1:size(data_free, 2)
+    plot(time_stamp, data_free(:, i), 'Color', color{i}, 'LineWidth', 3)
+    plot(time_stamp, data_bound(:, i), 'Color', color{i}, 'LineWidth', 3, 'LineStyle', '--');
+end
 hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend('VEGF-A', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside')
+xlabel(xlab)
+ylabel(ylab)
+legend(lgd, 'Location', 'northeastoutside')
 set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_lig_dist_PDRb', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_lig_dist_PDRb', result_foldername), 'png')
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
+
+end
+
+function [] = plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename)
+% If you are going to plot only short time
+if ~isempty(interest)
+    time_stamp = time_stamp(1:interest)/60;
+    data = data(1:interest, :);
+    xlab = 'Time (min)';
+else
+    time_stamp = time_stamp/3600;
+    xlab = 'Time (hour)';
+end
+
+% Plot
+figure('Position', [10 10 800 400])
+hold on;
+for i = 1:size(data, 2)
+    plot(time_stamp, data(:, i), 'Color', color{i}, 'LineWidth', 3);
+end
+hold off;
+xlabel(xlab)
+ylabel(ylab)
+legend(lgd, 'Location', 'northeastoutside')
+set(gca, 'fontsize', 25);
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
+
+end
