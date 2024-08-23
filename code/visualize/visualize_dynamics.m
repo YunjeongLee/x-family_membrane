@@ -35,6 +35,7 @@ filename = 'dynamics_free_vs_bound_lig';
 plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
 % Short time
+interest = 60*60+1;
 filename = 'short_dynamics_free_vs_bound_lig';
 plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
@@ -56,6 +57,7 @@ filename = 'dynamics_free_vs_bound_rec';
 plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
 
 % Short time
+interest = 5*60+1;
 filename = 'short_dynamics_free_vs_bound_rec';
 plot_free_vs_bound(time_stamp, data_free, data_bound, ylab, lgd_rec, color_rec, result_foldername, filename)
 
@@ -70,6 +72,7 @@ filename = 'dynamics_lig_dist_R1';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
+interest = 5*60+1;
 filename = 'short_dynamics_lig_dist_R1';
 plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
 
@@ -84,6 +87,7 @@ filename = 'dynamics_lig_dist_R2';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
+interest = 40*60+1;
 filename = 'short_dynamics_lig_dist_R2';
 plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
 
@@ -98,6 +102,7 @@ filename = 'dynamics_lig_dist_N1';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
+interest = 5*60+1;
 filename = 'short_dynamics_lig_dist_N1';
 plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
 
@@ -112,6 +117,7 @@ filename = 'dynamics_lig_dist_PDRa';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
+interest = 60*60+1;
 filename = 'short_dynamics_lig_dist_PDRa';
 plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
 
@@ -126,6 +132,7 @@ filename = 'dynamics_lig_dist_PDRb';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 % Short time
+interest = 60*60+1;
 filename = 'short_dynamics_lig_dist_PDRb';
 plot_bound(time_stamp, data, ylab, lgd, color, result_foldername, filename);
 
