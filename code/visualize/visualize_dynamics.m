@@ -102,19 +102,6 @@ filename = 'short_dynamics_lig_dist_N1';
 plot_bound(time_stamp, data, ylab, lgd, color, true, result_foldername, filename);
 
 %% Plot bound ligand to PDGFRa
-figure('Position', [10 10 800 400])
-hold on;
-plot(time_stamp/3600, result.VA_PDRa * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAA_PDRa * 1e12, 'Color', color_lig{4}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAB_PDRa * 1e12, 'Color', color_lig{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDBB_PDRa * 1e12, 'Color', color_lig{6}, 'LineWidth', 3);
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend('VEGF-A', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_lig_dist_PDRa', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_lig_dist_PDRa', result_foldername), 'png')
 
 %% Plot bound ligand to PDGFRb
 figure('Position', [10 10 800 400])
