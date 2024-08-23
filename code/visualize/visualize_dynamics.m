@@ -74,19 +74,6 @@ filename = 'short_dynamics_lig_dist_R1';
 plot_bound(time_stamp, data, ylab, lgd, color, true, result_foldername, filename);
 
 %% Plot bound ligand to VEGFR2
-figure('Position', [10 10 800 400])
-hold on;
-plot(time_stamp/3600, (result.VA_R2 + result.VA_R2_N1) * 1e12, 'Color', color_lig{1}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAA_R2 * 1e12, 'Color', color_lig{4}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDAB_R2 * 1e12, 'Color', color_lig{5}, 'LineWidth', 3);
-plot(time_stamp/3600, result.PDBB_R2 * 1e12, 'Color', color_lig{6}, 'LineWidth', 3);
-hold off;
-xlabel('Time (hour)')
-ylabel('pM')
-legend('VEGF-A', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
-saveas(gca, sprintf('%s/dynamics_lig_dist_R2', result_foldername), 'epsc')
-saveas(gca, sprintf('%s/dynamics_lig_dist_R2', result_foldername), 'png')
 
 %% Plot bound ligand to NRP1
 figure('Position', [10 10 800 400])
