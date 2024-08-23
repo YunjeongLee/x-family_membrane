@@ -134,7 +134,6 @@ end
 function [] = plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd, color, result_foldername, filename)
 % If you are going to plot only short time
 if flag_short
-    interest = 61;
     time_stamp = time_stamp(1:interest)/60;
     data_free = data_free(1:interest, :);
     data_bound = data_bound(1:interest, :);
@@ -164,7 +163,6 @@ end
 function [] = plot_bound(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename)
 % If you are going to plot only short time
 if flag_short
-    interest = 61;
     time_stamp = time_stamp(1:interest)/60;
     data = data(1:interest, :);
     xlab = 'Time (min)';
