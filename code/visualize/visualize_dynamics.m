@@ -121,6 +121,13 @@ ylab = 'pM';
 lgd = {'VEGF-A', 'PDGF-AB', 'PDGF-BB'};
 color = color_lig([1, 5:6]);
 
+% Long time
+filename = 'dynamics_lig_dist_PDRb';
+plot_bound(time_stamp, data, ylab, lgd, color, false, result_foldername, filename);
+
+% Short time
+filename = 'short_dynamics_lig_dist_PDRb';
+plot_bound(time_stamp, data, ylab, lgd, color, true, result_foldername, filename);
 
 end
 
