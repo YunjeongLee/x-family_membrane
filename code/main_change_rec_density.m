@@ -22,7 +22,7 @@ time_stamp = 0:3600:3600*24*10;
 lig_lgd = {'VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'};
 rec_lgd = {'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'};
 rec = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
-rec_density = 0:10:1e4;
+rec_density = 0:100:1e5;
 
 color_free_vs_bound = {'#8ecae6', '#219ebc'};
 color_lig_dist = {'#ff595e', '#ff924c', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'};
@@ -98,20 +98,13 @@ for i = 1:length(rec)
 end
 
 %% Visualization
-xtick = [0, 1e3:3e3:1e4];
+xtick = [0, 1e4:3e4:1e5];
 for i = 1:length(rec)
     %% Define the default value of receptors
     default = params_raw{strcmp(params_raw.Parameter, rec{i}), 'value'};
 
-    % If it's NRP1 and you're plotting a small range, then set it as nan
-    if i == 3
-        default2 = nan;
-    else
-        default2 = default;
-    end
-
     %% Generate results folder
-    result_foldername = sprintf('results/all_ligand/change_rec_density_zoom/%s', rec{i});
+    result_foldername = sprintf('results/all_ligand/change_rec_density/%s', rec{i});
     if ~exist(result_foldername, 'dir')
         mkdir(result_foldername);
     end
@@ -119,16 +112,16 @@ for i = 1:length(rec)
     %% Visualization -- Free vs. bound ligand
     lgd = {'Free', 'Bound', sprintf('Base = %d', default)};
     filename = sprintf('%s/free_vs_bound_lig', result_foldername);
-    visualize_stack_area(free_vs_bound_lig{i}, default2, rec_density, color_free_vs_bound, ...
+    visualize_stack_area(free_vs_bound_lig{i}, default, rec_density, color_free_vs_bound, ...
                          lig_lgd, xtick, rec_lgd{i}, lgd, filename)
 
     %% Visualization -- Free vs. bound receptor
     filename = sprintf('%s/free_vs_bound_rec', result_foldername);
-    visualize_stack_area(free_vs_bound_rec{i}, default2, rec_density, color_free_vs_bound, ...
+    visualize_stack_area(free_vs_bound_rec{i}, default, rec_density, color_free_vs_bound, ...
                          rec_lgd, xtick, rec_lgd{i}, lgd, filename)
 
     %% Visualization -- Ligand distribution
     filename = sprintf('%s/lig_dist', result_foldername);
-    visualize_stack_area(lig_dist{i}, default2, rec_density, color_lig_dist, ...
+    visualize_stack_area(lig_dist{i}, default, rec_density, color_lig_dist, ...
                          rec_lgd, xtick, rec_lgd{i}, [lig_lgd, {sprintf('Base = %d', default)}], filename)
 end
