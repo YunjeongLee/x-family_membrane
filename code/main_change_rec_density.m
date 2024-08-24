@@ -103,6 +103,13 @@ for i = 1:length(rec)
     %% Define the default value of receptors
     default = params_raw{strcmp(params_raw.Parameter, rec{i}), 'value'};
 
+    % If it's NRP1 and you're plotting a small range, then set it as nan
+    if i == 3
+        default2 = nan;
+    else
+        default2 = default;
+    end
+
     %% Generate results folder
     result_foldername = sprintf('results/all_ligand/change_rec_density/%s', rec{i});
     if ~exist(result_foldername, 'dir')
