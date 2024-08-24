@@ -111,7 +111,7 @@ for i = 1:length(rec)
     end
 
     %% Generate results folder
-    result_foldername = sprintf('results/all_ligand/change_rec_density/%s', rec{i});
+    result_foldername = sprintf('results/all_ligand/change_rec_density_zoom/%s', rec{i});
     if ~exist(result_foldername, 'dir')
         mkdir(result_foldername);
     end
