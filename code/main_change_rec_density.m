@@ -98,7 +98,7 @@ for i = 1:length(rec)
 end
 
 %% Visualization
-xtick = [0, 1e4:3e4:1e5];
+xtick = [0, 1e3:3e3:1e4];
 for i = 1:length(rec)
     %% Define the default value of receptors
     default = params_raw{strcmp(params_raw.Parameter, rec{i}), 'value'};
