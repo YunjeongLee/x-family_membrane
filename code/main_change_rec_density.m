@@ -149,6 +149,7 @@ for i = 1:length(rec)
                        lig_lgd, xtick, rec_lgd{i}, lgd, filename)
 
     %% Visualization -- Free vs. bound receptor
+    lgd = {'Free', 'Bound', sprintf('Base = %d', default)};
     filename = sprintf('%s/free_vs_bound_rec', result_foldername);
     visualize_stack_area(free_vs_bound_rec{i}, default, rec_density, color_free_vs_bound, ...
                          rec_lgd, xtick, rec_lgd{i}, lgd, filename)
