@@ -158,4 +158,10 @@ for i = 1:length(rec)
     filename = sprintf('%s/lig_dist', result_foldername);
     visualize_stack_area(lig_dist{i}, default, rec_density, color_lig_dist, ...
                          rec_lgd, xtick, rec_lgd{i}, [lig_lgd, {sprintf('Base = %d', default)}], filename)
+    
+    %% Visualization -- Receptor distribution
+    lgd = {'VEGFR1', 'VEGFR2', 'VEGFR2:NRP1', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta', sprintf('Base = %d', default)};
+    filename = sprintf('%s/rec_dist', result_foldername);
+    visualize_rec_dist(rec_dist{i}, default, rec_density, color_rec_dist, ...
+                       lig_lgd, xtick, rec_lgd{i}, lgd, filename)
 end
