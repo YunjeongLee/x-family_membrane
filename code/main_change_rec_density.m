@@ -30,8 +30,10 @@ color_rec_dist = {'#8ecae6', '#219ebc', '#126782', '#023047', '#ffb703', '#fb850
 
 %% Main loop
 free_vs_bound_lig = cell(length(rec), 1);
+free_lig = cell(length(rec), 1);
 free_vs_bound_rec = cell(length(rec), 1);
 lig_dist = cell(length(rec), 1);
+rec_dist = cell(length(rec), 1);
 for i = 1:length(rec)
     for j = 1:length(rec_density)
         % Initialize parameter table
