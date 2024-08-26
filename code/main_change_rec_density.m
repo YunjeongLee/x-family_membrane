@@ -67,6 +67,12 @@ for i = 1:length(rec)
         % Record data
         free_vs_bound_lig{i}(j, :, :) = data;
 
+        %% Record free ligand
+        data = [result.VA_free(end), result.VB_free(end), result.Pl_free(end), ...
+                result.PDAA_free(end), result.PDAB_free(end), result.PDBB_free(end)] * 1e12;
+
+        free_lig{i}(j, :) = data;
+
         %% Record free vs. bound rec
         R1 = [result.R1_free(end), result.R1_bound(end)];
         R2 = [result.R2_free(end), result.R2_bound(end)];
