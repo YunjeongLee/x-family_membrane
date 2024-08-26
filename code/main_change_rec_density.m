@@ -26,6 +26,7 @@ rec_density = 0:100:1e5;
 
 color_free_vs_bound = {'#8ecae6', '#219ebc'};
 color_lig_dist = {'#ff595e', '#ff924c', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'};
+color_rec_dist = {'#8ecae6', '#219ebc', '#126782', '#023047', '#ffb703', '#fb8500'};
 
 %% Main loop
 free_vs_bound_lig = cell(length(rec), 1);
