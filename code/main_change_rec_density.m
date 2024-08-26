@@ -103,6 +103,14 @@ for i = 1:length(rec)
 
         % Record data
         lig_dist{i}(j, :, :) = data;
+
+        %% Record receptor distribution
+        lig_VA = [result.VA_R1(end), result.VA_R2(end), result.VA_R2_N1(end), result.VA_N1(end), result.VA_PDRa(end), result.VA_PDRb(end)];
+        lig_VB = [result.VB_R1(end), 0, 0, result.VB_N1(end), 0, 0];
+        lig_Pl = [result.Pl_R1(end), 0, 0, result.Pl_N1(end), 0, 0];
+        lig_PDAA = [0, result.PDAA_R2(end), 0, 0, result.PDAA_PDRa(end), 0];
+        lig_PDAB = [0, result.PDAB_R2(end), 0, 0, result.PDAB_PDRa(end), result.PDAB_PDRb(end)];
+        lig_PDBB = [0, result.PDBB_R2(end), 0, 0, result.PDBB_PDRa(end), result.PDBB_PDRb(end)];
     end
 end
 
