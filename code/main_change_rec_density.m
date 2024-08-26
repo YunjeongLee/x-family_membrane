@@ -22,15 +22,18 @@ time_stamp = 0:3600:3600*24*10;
 lig_lgd = {'VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'};
 rec_lgd = {'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'};
 rec = {'R1', 'R2', 'N1', 'PDRa', 'PDRb'};
-rec_density = 1000:100:1e5;
+rec_density = 0:100:1e5;
 
 color_free_vs_bound = {'#8ecae6', '#219ebc'};
 color_lig_dist = {'#ff595e', '#ff924c', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'};
+color_rec_dist = {'#8ecae6', '#219ebc', '#126782', '#023047', '#ffb703', '#fb8500'};
 
 %% Main loop
 free_vs_bound_lig = cell(length(rec), 1);
+free_lig = cell(length(rec), 1);
 free_vs_bound_rec = cell(length(rec), 1);
 lig_dist = cell(length(rec), 1);
+rec_dist = cell(length(rec), 1);
 for i = 1:length(rec)
     for j = 1:length(rec_density)
         % Initialize parameter table
@@ -64,6 +67,12 @@ for i = 1:length(rec)
         % Record data
         free_vs_bound_lig{i}(j, :, :) = data;
 
+        %% Record free ligand
+        data = [result.VA_free(end), result.VB_free(end), result.Pl_free(end), ...
+                result.PDAA_free(end), result.PDAB_free(end), result.PDBB_free(end)] * 1e12;
+
+        free_lig{i}(j, :) = data;
+
         %% Record free vs. bound rec
         R1 = [result.R1_free(end), result.R1_bound(end)];
         R2 = [result.R2_free(end), result.R2_bound(end)];
@@ -94,11 +103,29 @@ for i = 1:length(rec)
 
         % Record data
         lig_dist{i}(j, :, :) = data;
+
+        %% Record receptor distribution
+        lig_VA = [result.VA_R1(end), result.VA_R2(end), result.VA_R2_N1(end), result.VA_N1(end), result.VA_PDRa(end), result.VA_PDRb(end)];
+        lig_VB = [result.VB_R1(end), 0, 0, result.VB_N1(end), 0, 0];
+        lig_Pl = [result.Pl_R1(end), 0, 0, result.Pl_N1(end), 0, 0];
+        lig_PDAA = [0, result.PDAA_R2(end), 0, 0, result.PDAA_PDRa(end), 0];
+        lig_PDAB = [0, result.PDAB_R2(end), 0, 0, result.PDAB_PDRa(end), result.PDAB_PDRb(end)];
+        lig_PDBB = [0, result.PDBB_R2(end), 0, 0, result.PDBB_PDRa(end), result.PDBB_PDRb(end)];
+        
+        % Aggregate all data
+        data = cat(3, lig_VA * 1e12, ...
+                      lig_VB * 1e12, ...
+                      lig_Pl * 1e12, ...
+                      lig_PDAA * 1e12, ...
+                      lig_PDAB * 1e12, ...
+                      lig_PDBB * 1e12);
+        % Record data
+        rec_dist{i}(j, :, :) = data;
     end
 end
 
 %% Visualization
-xtick = [1e3, 1e4:3e4:1e5];
+xtick = [0, 1e4:3e4:1e5];
 for i = 1:length(rec)
     %% Define the default value of receptors
     default = params_raw{strcmp(params_raw.Parameter, rec{i}), 'value'};
@@ -115,7 +142,14 @@ for i = 1:length(rec)
     visualize_stack_area(free_vs_bound_lig{i}, default, rec_density, color_free_vs_bound, ...
                          lig_lgd, xtick, rec_lgd{i}, lgd, filename)
 
+    %% Visualize free ligand concentration
+    lgd = {'Free', sprintf('Base = %d', default)};
+    filename = sprintf('%s/free_lig', result_foldername);
+    visualize_free_lig(free_lig{i}, default, rec_density, color_lig_dist, ...
+                       lig_lgd, xtick, rec_lgd{i}, lgd, filename)
+
     %% Visualization -- Free vs. bound receptor
+    lgd = {'Free', 'Bound', sprintf('Base = %d', default)};
     filename = sprintf('%s/free_vs_bound_rec', result_foldername);
     visualize_stack_area(free_vs_bound_rec{i}, default, rec_density, color_free_vs_bound, ...
                          rec_lgd, xtick, rec_lgd{i}, lgd, filename)
@@ -124,4 +158,10 @@ for i = 1:length(rec)
     filename = sprintf('%s/lig_dist', result_foldername);
     visualize_stack_area(lig_dist{i}, default, rec_density, color_lig_dist, ...
                          rec_lgd, xtick, rec_lgd{i}, [lig_lgd, {sprintf('Base = %d', default)}], filename)
+    
+    %% Visualization -- Receptor distribution
+    lgd = {'VEGFR1', 'VEGFR2', 'VEGFR2:NRP1', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta', sprintf('Base = %d', default)};
+    filename = sprintf('%s/rec_dist', result_foldername);
+    visualize_rec_dist(rec_dist{i}, default, rec_density, color_rec_dist, ...
+                       lig_lgd, xtick, rec_lgd{i}, lgd, filename)
 end
