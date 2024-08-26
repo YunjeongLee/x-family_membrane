@@ -111,6 +111,16 @@ for i = 1:length(rec)
         lig_PDAA = [0, result.PDAA_R2(end), 0, 0, result.PDAA_PDRa(end), 0];
         lig_PDAB = [0, result.PDAB_R2(end), 0, 0, result.PDAB_PDRa(end), result.PDAB_PDRb(end)];
         lig_PDBB = [0, result.PDBB_R2(end), 0, 0, result.PDBB_PDRa(end), result.PDBB_PDRb(end)];
+        
+        % Aggregate all data
+        data = cat(3, lig_VA * 1e12, ...
+                      lig_VB * 1e12, ...
+                      lig_Pl * 1e12, ...
+                      lig_PDAA * 1e12, ...
+                      lig_PDAB * 1e12, ...
+                      lig_PDBB * 1e12);
+        % Record data
+        rec_dist{i}(j, :, :) = data;
     end
 end
 
