@@ -1,0 +1,15 @@
+﻿Parameter,value,Unit
+V0,2.20E-09,M
+P0,2.20E-09,M
+R10,8.00E+04,rec/cell
+R20,2.30E+05,rec/cell
+konVR1,3.80E+06,1/M/s
+konVR2,1.20E+06,1/M/s
+konPR1,1.50E+06,1/M/s
+koffVR1,9.50E-05,1/s
+koffVR2,4.10E-04,1/s
+koffPR1,3.45E-04,1/s
+kint_free,1.00E-05,1/s
+kint_bound,2.80E-04,1/s
+Dv,1.00E-06,cm2/s
+Dp,1.00E-06,cm2/s
