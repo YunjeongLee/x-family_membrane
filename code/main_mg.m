@@ -77,6 +77,9 @@ ylabel('Time (hour)')
 zlabel('Complex (rec/cell)')
 set(gca, 'fontsize', 25)
 
+saveas(gca, sprintf('%s/Figure1A', result_foldername), 'epsc')
+saveas(gca, sprintf('%s/Figure1A', result_foldername), 'png')
+
 %% Visualize ligand distribution
 R1_dist = [VR1(:, 1), PR1(:, 1)] * avogadro * EC_area;
 R2_dist = VR2(:, 1) * avogadro * EC_area;
@@ -102,3 +105,6 @@ ylabel('# of Complexes (rec/cell)')
 legend('VEGF', 'Location', 'northeastoutside')
 title('VEGFR2')
 set(gca, 'fontsize', 25)
+
+saveas(gca, sprintf('%s/lig_dist', result_foldername), 'epsc')
+saveas(gca, sprintf('%s/lig_dist', result_foldername), 'png')
