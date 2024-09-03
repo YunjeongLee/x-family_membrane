@@ -193,3 +193,31 @@ saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
 end
+
+function [] = plot_stack(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename)
+% If you are going to plot only short time
+if ~isempty(interest)
+    time_stamp = time_stamp(1:interest)/60;
+    data = data(1:interest, :);
+    xlab = 'Time (min)';
+else
+    time_stamp = time_stamp/3600;
+    xlab = 'Time (hour)';
+end
+
+% Plot
+figure('Position', [10 10 800 400])
+hold on;
+a = area(time_stamp, data, 'EdgeColor', 'none');
+a(1).FaceColor = color{1};
+a(2).FaceColor = color{3};
+hold off;
+xlabel(xlab)
+ylabel(ylab)
+ylim([0 1610])
+legend(lgd, 'Location', 'northeastoutside')
+set(gca, 'fontsize', 25);
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
+
+end
