@@ -1,6 +1,6 @@
 ﻿Parameter,value,Unit
-V0,2.200E-09,M
-P0,2.200E-09,M
+V0,2.220E-09,M
+P0,2.220E-09,M
 R10,8.000E+04,rec/cell
 R20,2.300E+05,rec/cell
 konVR1,3.800E+06,1/M/s
