@@ -71,6 +71,12 @@ color = color_lig(1:3);
 filename = 'dynamics_lig_dist_R1';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
+data = [result.VA_R1, result.Pl_R1] * 6.02214e23 * 1e-12;
+filename = 'stack_lig_dist_R1';
+ylab = '# of Complexes (rec/cell)';
+lgd = {'VEGF-A', 'PlGF'};
+plot_stack(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
+
 % Short time
 interest = 60*60*12+1;
 filename = 'short_dynamics_lig_dist_R1';
