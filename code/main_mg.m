@@ -8,7 +8,7 @@ restoredefaultpath;
 addpath ../data/ model/mg etc/
 
 %% Generate results folder
-result_foldername = 'results/mg/update_rec_density';
+result_foldername = 'results/mg/update_rec_and_kinetic';
 if ~exist(result_foldername, 'dir')
     mkdir(result_foldername);
 end
