@@ -38,7 +38,7 @@ EC_area = 1e-5;
 
 figure('Position', [10 10 1600 1000]);
 subplot(2, 2, 1);
-surf(xrange,time_stamp/3600, V * 1e9)
+surf(xrange,time_stamp/3600, V * 1e9, 'EdgeColor', 'none')
 title('V(x,t)')
 xlabel('Distance (cm)')
 ylabel('Time (hour)')
@@ -46,7 +46,7 @@ zlabel('Concentration (nM)')
 set(gca, 'fontsize', 25)
 
 subplot(2, 2, 2);
-surf(xrange,time_stamp/3600, P * 1e9)
+surf(xrange,time_stamp/3600, P * 1e9, 'EdgeColor', 'none')
 title('P(x,t)')
 xlabel('Distance (cm)')
 ylabel('Time (hour)')
