@@ -9,7 +9,7 @@ konPR1,5.790E+04,1/M/s
 koffVR1,1.000E-04,1/s
 koffVR2,7.700E-04,1/s
 koffPR1,2.690E-06,1/s
-kint_free,1.000E-05,1/s
-kint_bound,2.800E-04,1/s
+kint_free,0.000E+00,1/s
+kint_bound,0.000E+00,1/s
 Dv,1.000E-06,cm2/s
 Dp,1.000E-06,cm2/s
