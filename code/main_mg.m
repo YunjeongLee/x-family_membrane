@@ -7,6 +7,12 @@ restoredefaultpath;
 % Add paths
 addpath ../data/ model/mg etc/
 
+%% Generate results folder
+result_foldername = 'results/mg/default';
+if ~exist(result_foldername, 'dir')
+    mkdir(result_foldername);
+end
+
 %% Define params
 params_raw = readtable("parameters_mg.csv");
 params = change_unit_mg(params_raw);
