@@ -70,3 +70,29 @@ xlabel('Distance (cm)')
 ylabel('Time (hour)')
 zlabel('Complex (rec/cell)')
 set(gca, 'fontsize', 25)
+
+%% Visualize ligand distribution
+R1_dist = [VR1(:, 1), PR1(:, 1)] * avogadro * EC_area;
+R2_dist = VR2(:, 1) * avogadro * EC_area;
+interest = 1:find(time_stamp == 3600*2400);
+
+color_lig = {'#ff595e', '#ffca3a'};
+figure('Position', [10 10 1600 500])
+subplot(1, 2, 1);
+a = area(time_stamp(interest)/3600, R1_dist(interest, :), 'EdgeColor', 'none');
+a(1).FaceColor = [255, 89, 95]/256;
+a(2).FaceColor = [255, 202, 58]/256;
+xlabel('Time (hour)')
+ylabel('# of Complexes (rec/cell)')
+legend('VEGF', 'PlGF', 'Location', 'northeastoutside')
+title('VEGFR1')
+set(gca, 'fontsize', 25)
+
+subplot(1, 2, 2);
+area(time_stamp(interest)/3600, R2_dist(interest), 'EdgeColor', 'none')
+colororder(color_lig(1))
+xlabel('Time (hour)')
+ylabel('# of Complexes (rec/cell)')
+legend('VEGF', 'Location', 'northeastoutside')
+title('VEGFR2')
+set(gca, 'fontsize', 25)
