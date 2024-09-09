@@ -96,7 +96,6 @@ a(2).FaceColor = [255, 202, 58]/256;
 xlabel('Time (hour)')
 ylabel('# of Complexes (rec/cell)')
 legend('VEGF', 'PlGF', 'Location', 'northeastoutside')
-title('VEGFR1')
 set(gca, 'fontsize', 25)
 saveas(gca, sprintf('%s/lig_dist', result_foldername), 'epsc')
 saveas(gca, sprintf('%s/lig_dist', result_foldername), 'png')
