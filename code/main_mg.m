@@ -91,7 +91,7 @@ interest = 1:find(time_stamp == 3600*2400);
 figure('Position', [10 10 800 400])
 a = area(time_stamp(interest)/3600, R1_dist(interest, :), 'EdgeColor', 'none');
 a(1).FaceColor = [255, 89, 95]/256;
-a(2).FaceColor = [255, 202, 58]/256;
+a(2).FaceColor = [106, 76, 147]/256;
 xlabel('Time (hour)')
 ylabel('# of Complexes (rec/cell)')
 legend('VEGF', 'PlGF', 'Location', 'northeastoutside')
