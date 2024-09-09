@@ -61,6 +61,7 @@ set(gca, 'fontsize', 25)
 
 subplot(2, 2, 3);
 surf(xrange, time_stamp/3600, (VR1 + PR1) * avogadro * EC_area);
+ylim([0 1])
 view(90, 0)
 title('VEGFR1 complex(x,t)')
 xlabel('Distance (cm)')
@@ -70,6 +71,7 @@ set(gca, 'fontsize', 25)
 
 subplot(2, 2, 4);
 surf(xrange, time_stamp/3600, VR2 * avogadro * EC_area);
+ylim([0 1])
 view(90, 0)
 title('VEGFR2 complex(x,t)')
 xlabel('Distance (cm)')
