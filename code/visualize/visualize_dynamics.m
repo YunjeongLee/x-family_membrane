@@ -216,7 +216,7 @@ figure('Position', [10 10 800 400])
 hold on;
 a = area(time_stamp, data, 'EdgeColor', 'none');
 a(1).FaceColor = color{1};
-a(2).FaceColor = color{3};
+a(2).FaceColor = color{end};
 hold off;
 xlabel(xlab)
 ylabel(ylab)
