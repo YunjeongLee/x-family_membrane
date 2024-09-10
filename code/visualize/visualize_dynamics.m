@@ -74,7 +74,7 @@ plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 data = [result.VA_R1, result.Pl_R1] * 6.02214e23 * 1e-12;
 filename = 'stack_lig_dist_R1';
 ylab = '# of Complexes (rec/cell)';
-lgd = {'VEGF-A', 'PlGF'};
+lgd = {'VEGF', 'PlGF'};
 plot_stack(time_stamp, [], data, ylab, lgd, color_lig, result_foldername, filename);
 
 % Short time
