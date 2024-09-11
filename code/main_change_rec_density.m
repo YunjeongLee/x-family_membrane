@@ -183,4 +183,14 @@ for i = 1:length(rec)
     filename = sprintf('%s/rec_dist', result_foldername);
     visualize_rec_dist(rec_dist{i}, default, rec_density, color_rec_dist, ...
                        lig_lgd, xtick, rec_lgd{i}, lgd, filename)
+
+    %% Visualization -- PlGF association and dissociation
+    if i == 3 % for nrp1 only
+        title = {'Association of PlGF', 'Dissociation of PlGF'};
+        lgd = {'VEGFR1', 'NRP1', sprintf('Base = %d', default)};
+        filenames = {sprintf('%s/plgf_assoc_dissoc', result_foldername), ...
+                     sprintf('%s/plgf_assoc_dissoc_prop', result_foldername)};
+        visualize_assoc_dissoc({pl_assoc, pl_dissoc}, default, rec_density, ...
+                               color_rec_dist([1, 3]), title, xtick, rec_lgd{i}, lgd, filenames)
+    end
 end
