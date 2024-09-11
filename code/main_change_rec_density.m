@@ -34,6 +34,8 @@ free_lig = cell(length(rec), 1);
 free_vs_bound_rec = cell(length(rec), 1);
 lig_dist = cell(length(rec), 1);
 rec_dist = cell(length(rec), 1);
+pl_assoc = zeros(length(rec_density), 2);
+pl_dissoc = zeros(length(rec_density), 2);
 for i = 1:length(rec)
     for j = 1:length(rec_density)
         % Initialize parameter table
