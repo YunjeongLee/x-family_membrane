@@ -123,6 +123,23 @@ for i = 1:length(rec)
                       lig_PDBB * 1e12);
         % Record data
         rec_dist{i}(j, :, :) = data;
+
+        %% Record association and dissociation of PlGF
+        if i == 3 % for NRP1
+            % PlGF:VEGFR1
+            assoc_plgf_vegfr1 = params_struct.konPlR1 * result.Pl(end) * result.R1(end);
+            dissoc_plgf_vegfr1 = params_struct.koffPlR1 * result.Pl_R1(end);
+
+            % PlGF:NRP1
+            assoc_plgf_nrp1 = params_struct.konPlN1 * result.Pl(end) * result.N1(end);
+            dissoc_plgf_nrp1 = params_struct.koffPlN1 * result.Pl_N1(end);
+
+            % Record data
+            pl_assoc(j, :) = [assoc_plgf_vegfr1, assoc_plgf_nrp1];
+            pl_dissoc(j, :) = [dissoc_plgf_vegfr1, dissoc_plgf_nrp1];
+        else
+            continue
+        end
     end
 end
 
