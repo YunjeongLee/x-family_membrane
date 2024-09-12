@@ -131,7 +131,7 @@ for i = 1:length(rec)
             dissoc_plgf_vegfr1 = params_struct.koffPlR1 * result.Pl_R1(end);
 
             % PlGF:NRP1
-            assoc_plgf_nrp1 = params_struct.konPlN1 * result.Pl(end) * result.N1(end);
+            assoc_plgf_nrp1 = params_struct.konPlN1 * result.N1(end);
             dissoc_plgf_nrp1 = params_struct.koffPlN1 * result.Pl_N1(end);
 
             % Record data
