@@ -127,7 +127,7 @@ for i = 1:length(rec)
         %% Record association and dissociation of PlGF
         if i == 3 % for NRP1
             % PlGF:VEGFR1
-            assoc_plgf_vegfr1 = params_struct.konPlR1 * result.Pl(end) * result.R1(end);
+            assoc_plgf_vegfr1 = params_struct.konPlR1 * result.R1(end);
             dissoc_plgf_vegfr1 = params_struct.koffPlR1 * result.Pl_R1(end);
 
             % PlGF:NRP1
