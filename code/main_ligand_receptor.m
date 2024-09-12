@@ -35,6 +35,7 @@ time_stamp = 0:3600*24*0.01;
 result_all_lig = solve_lig_rec(time_stamp, params_struct);
 
 %% Visualization
+visualize_vegfa(time_stamp, params_struct, result_all_lig)
 visualize_dynamics(time_stamp, result_all_lig, result_foldername)
 visualize_lig_prop(result_all_lig, result_foldername)
 visualize_rec_prop(result_all_lig, result_foldername)
