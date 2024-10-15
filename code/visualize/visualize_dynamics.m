@@ -71,6 +71,14 @@ color = color_lig(1:3);
 filename = 'dynamics_lig_dist_R1';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
+if result.VB(1) == 0
+    data = [result.VA_R1, result.Pl_R1] * 6.02214e23 * 1e-12;
+    filename = 'stack_lig_dist_R1';
+    ylab = '# of Complexes (rec/cell)';
+    lgd = {'VEGF', 'PlGF'};
+    plot_stack(time_stamp, [], data, ylab, lgd, color_lig, result_foldername, filename);
+end
+
 % Short time
 interest = 60*60*12+1;
 filename = 'short_dynamics_lig_dist_R1';
@@ -187,6 +195,34 @@ end
 hold off;
 xlabel(xlab)
 ylabel(ylab)
+legend(lgd, 'Location', 'northeastoutside')
+set(gca, 'fontsize', 25);
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
+saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
+
+end
+
+function [] = plot_stack(time_stamp, interest, data, ylab, lgd, color, result_foldername, filename)
+% If you are going to plot only short time
+if ~isempty(interest)
+    time_stamp = time_stamp(1:interest)/60;
+    data = data(1:interest, :);
+    xlab = 'Time (min)';
+else
+    time_stamp = time_stamp/3600;
+    xlab = 'Time (hour)';
+end
+
+% Plot
+figure('Position', [10 10 800 400])
+hold on;
+a = area(time_stamp, data, 'EdgeColor', 'none');
+a(1).FaceColor = color{1};
+a(2).FaceColor = color{end};
+hold off;
+xlabel(xlab)
+ylabel(ylab)
+ylim([0 1610])
 legend(lgd, 'Location', 'northeastoutside')
 set(gca, 'fontsize', 25);
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')

@@ -8,7 +8,7 @@ restoredefaultpath;
 addpath ../data model/ etc/ visualize/
 
 %% Generate results folder
-result_foldername = 'results/all_ligand/default';
+result_foldername = 'results/all_ligand/excess_VA_Pl';
 if ~exist(result_foldername, 'dir')
     mkdir(result_foldername);
 end
@@ -30,7 +30,7 @@ params_struct.species_names = params_raw{1:params_struct.num_state, 'Parameter'}
 
 %% Solve the ODE system
 % Define timeline
-time_stamp = 0:3600*24*10;
+time_stamp = 0:1000:3600*2400;
 
 result_all_lig = solve_lig_rec(time_stamp, params_struct);
 
