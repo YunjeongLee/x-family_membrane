@@ -76,7 +76,7 @@ if result.VB(1) == 0
     filename = 'stack_lig_dist_R1';
     ylab = '# of Complexes (rec/cell)';
     lgd = {'VEGF', 'PlGF'};
-    plot_stack(time_stamp, [], data, ylab, lgd, color_lig, result_foldername, filename);
+    plot_stack(time_stamp, [], data_temp, ylab_temp, lgd_temp, color_lig, result_foldername, filename);
 end
 
 % Short time
