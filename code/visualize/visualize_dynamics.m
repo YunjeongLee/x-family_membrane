@@ -35,7 +35,7 @@ filename = 'dynamics_free_vs_bound_lig';
 plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
 % Short time
-interest = 60*60+1;
+interest = 60*20+1;
 filename = 'short_dynamics_free_vs_bound_lig_20min';
 plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
