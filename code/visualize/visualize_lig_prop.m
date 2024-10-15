@@ -21,9 +21,9 @@ b(2).FaceColor = color_rec{5};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
             if j ~= 2
-                text(i-0.2, sum(data(i, 1:j))+3, sprintf('%.2f', data(i, j)), 'FontSize', 20, 'Color', 'k');
+                text(i-0.2, sum(data(i, 1:j))+3, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k');
             else
-                text(i-0.2, sum(data(i, 1:j))-5, sprintf('%.2f', data(i, j)), 'FontSize', 20, 'Color', 'k');
+                text(i-0.2, sum(data(i, 1:j))-5, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k');
             end
     end
 end
