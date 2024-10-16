@@ -8,7 +8,7 @@ for i = 1:size(data, 3)
     xline(default, 'LineWidth', 3, 'LineStyle', ':');
     hold off;
     xlabel(sprintf('[%s] (rec/cell)', xlabels))
-    ylabel('Proportion (%)')
+    ylabel('Percentage (%)')
     ylim([0 100])
     xtickformat('%,g')
     title(ttl{i})
