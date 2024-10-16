@@ -59,7 +59,7 @@ end
 xticklabels({'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'});
 xlim([0 6])
 ylim([0 100])
-ylabel('Proportion (%)')
+ylabel('Percentage (%)')
 legend('VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside')
 set(gca, 'fontsize', 25)
 saveas(gca, sprintf('%s/Receptor_ligand_dist', result_foldername), 'png')
