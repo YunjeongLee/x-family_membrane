@@ -30,7 +30,7 @@ end
 xticklabels({'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'});
 xlim([0 6])
 ylim([0 100])
-ylabel('Proportion (%)')
+ylabel('Percentage (%)')
 legend('Free', 'Bound', 'Location', 'northeastoutside')
 set(gca, 'fontsize', 25)
 saveas(gca, sprintf('%s/Receptor_free_VS_bound', result_foldername), 'png')
