@@ -16,7 +16,7 @@ data = [VA; VB; Pl; PDAA; PDAB; PDBB];
 %% Plot figure
 figure('Position', [10 10 1200 500]);
 b = bar(1:6, data, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.5);
-b(1).FaceColor = color_rec{4};
+b(1).FaceColor = color_rec{1};
 b(2).FaceColor = color_rec{2};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
