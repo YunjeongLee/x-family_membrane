@@ -1,7 +1,7 @@
 function [] = visualize_rec_prop(result, result_foldername)
 %% Define color of bar
 color_lig = {'#ff595e', '#ff924c', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'};
-color_rec = {'#8ecae6', '#219ebc', '#023047', '#ffb703', '#fb8500'};
+color_rec = {'#345995', '#eac435'};
 
 %% Calculate the proportion of free vs. bound receptors
 R1 = [result.R1_free(end), result.R1_bound(end)]/(result.R1_free(end) + result.R1_bound(end)) * 100;
@@ -16,12 +16,12 @@ data = [R1; R2; N1; PDRa; PDRb];
 %% Plot figure
 figure('Position', [10 10 1200 500]);
 b = bar(1:5, data, 'stacked', 'EdgeColor', 'none', 'BarWidth', 0.5);
-b(1).FaceColor = color_rec{4};
-b(2).FaceColor = color_rec{5};
+b(1).FaceColor = color_rec{1};
+b(2).FaceColor = color_rec{2};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
             if j ~= 2
-                text(i-0.1, 3, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k');
+                text(i-0.1, 3, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'w');
             else
                 text(i-0.1, sum(data(i, 1:j))-3, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k');
             end
