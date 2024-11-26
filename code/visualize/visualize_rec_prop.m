@@ -1,7 +1,7 @@
 function [] = visualize_rec_prop(result, result_foldername)
 %% Define color of bar
 color_lig = {'#ff595e', '#ff924c', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93'};
-color_rec = {'#8ecae6', '#219ebc', '#023047', '#ffb703', '#fb8500'};
+color_rec = {'#345995', '#eac435'};
 
 %% Calculate the proportion of free vs. bound receptors
 R1 = [result.R1_free(end), result.R1_bound(end)]/(result.R1_free(end) + result.R1_bound(end)) * 100;

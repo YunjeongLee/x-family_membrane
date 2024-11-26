@@ -1,6 +1,6 @@
 function [] = visualize_lig_prop(result, result_foldername)
 %% Define color of bar
-color_rec = {'#8ecae6', '#219ebc', '#023047', '#ffb703', '#fb8500'};
+color_rec = {'#345995', '#eac435'};
 
 %% Calculate proportion of free and bound ligand
 VA = [result.VA_free(end), result.VA_bound(end)]/(result.VA_free(end) + result.VA_bound(end)) * 100;
