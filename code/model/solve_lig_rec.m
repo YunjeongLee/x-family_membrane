@@ -4,7 +4,7 @@ params_cell = struct2cell(params_struct);
 y0 = cell2mat(params_cell(1:params_struct.num_state));
 
 %% Solve ODE system
-options = odeset('AbsTol', 1e-20, 'RelTol', 1e-9);
+options = odeset('AbsTol', 1e-20, 'RelTol', 1e-9, 'NonNegative', 1:length(y0));
 
 [~, sol] = ode15s(@(t, y) ODE_lig_rec(t, y, params_struct), time_stamp, y0, options);
 
