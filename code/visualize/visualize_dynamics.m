@@ -169,7 +169,7 @@ hold off;
 xlabel(xlab)
 ylabel(ylab)
 legend(lgd, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
+set(gca, 'fontsize', 25, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
@@ -196,7 +196,7 @@ hold off;
 xlabel(xlab)
 ylabel(ylab)
 legend(lgd, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
+set(gca, 'fontsize', 25, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
@@ -224,7 +224,7 @@ xlabel(xlab)
 ylabel(ylab)
 ylim([0 1610])
 legend(lgd, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
+set(gca, 'fontsize', 25, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
