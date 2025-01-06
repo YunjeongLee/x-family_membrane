@@ -166,7 +166,7 @@ for i = 1:size(data_free, 2)
     plot(time_stamp, data_bound(:, i), 'Color', color{i}, 'LineWidth', 3, 'LineStyle', '--');
 end
 hold off;
-xlabel(xlab)
+xlabel(xlab, 'fontname', 'Arial')
 ylabel(ylab, 'fontname', 'Arial')
 legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial');
@@ -193,7 +193,7 @@ for i = 1:size(data, 2)
     plot(time_stamp, data(:, i), 'Color', color{i}, 'LineWidth', 3);
 end
 hold off;
-xlabel(xlab)
+xlabel(xlab, 'fontname', 'Arial')
 ylabel(ylab, 'fontname', 'Arial')
 legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial');
@@ -221,7 +221,7 @@ a(1).FaceColor = color{1};
 a(2).FaceColor = color{end};
 hold off;
 xlabel(xlab)
-ylabel(ylab)
+ylabel(ylab, 'fontname', 'Arial')
 ylim([0 1610], 'fontname', 'Arial')
 legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial');
