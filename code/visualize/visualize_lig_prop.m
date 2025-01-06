@@ -21,9 +21,9 @@ b(2).FaceColor = color_rec{2};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
             if j ~= 2
-                text(i-0.1, sum(data(i, 1:j))+3, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k');
+                text(i-0.1, sum(data(i, 1:j))+3, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k', 'fontname', 'Arial');
             else
-                text(i-0.1, sum(data(i, 1:j))-5, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k');
+                text(i-0.1, sum(data(i, 1:j))-5, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k', 'fontname', 'Arial');
             end
     end
 end
@@ -32,6 +32,6 @@ ylim([0 100]);
 xticklabels({'VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'})
 ylabel('Percentage (%)')
 legend('Free', 'Bound', 'location', 'northeastoutside')
-set(gca, 'fontsize', 25);
+set(gca, 'fontsize', 25, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/Ligand_free_VS_bound', result_foldername), 'png');
 saveas(gca, sprintf('%s/Ligand_free_VS_bound', result_foldername), 'epsc');
