@@ -220,7 +220,7 @@ a = area(time_stamp, data, 'EdgeColor', 'none');
 a(1).FaceColor = color{1};
 a(2).FaceColor = color{end};
 hold off;
-xlabel(xlab)
+xlabel(xlab, 'fontname', 'Arial')
 ylabel(ylab, 'fontname', 'Arial')
 ylim([0 1610], 'fontname', 'Arial')
 legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
