@@ -31,7 +31,7 @@ xlim([0 7]);
 ylim([0 100]);
 xticklabels({'VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'})
 ylabel('Percentage (%)')
-legend('Free', 'Bound', 'location', 'northeastoutside')
+legend('Free', 'Bound', 'location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/Ligand_free_VS_bound', result_foldername), 'png');
 saveas(gca, sprintf('%s/Ligand_free_VS_bound', result_foldername), 'epsc');
