@@ -30,7 +30,7 @@ end
 xticklabels({'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'});
 xlim([0 6])
 ylim([0 100])
-ylabel('Percentage (%)')
+ylabel('Percentage (%)', 'fontname', 'Arial')
 legend('Free', 'Bound', 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial')
 saveas(gca, sprintf('%s/Receptor_free_VS_bound', result_foldername), 'png')
@@ -59,7 +59,7 @@ end
 xticklabels({'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'});
 xlim([0 6])
 ylim([0 100])
-ylabel('Percentage (%)')
+ylabel('Percentage (%)', 'fontname', 'Arial')
 legend('VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial')
 saveas(gca, sprintf('%s/Receptor_ligand_dist', result_foldername), 'png')
