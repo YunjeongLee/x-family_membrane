@@ -167,7 +167,7 @@ for i = 1:size(data_free, 2)
 end
 hold off;
 xlabel(xlab)
-ylabel(ylab)
+ylabel(ylab, 'fontname', 'Arial')
 legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
@@ -194,7 +194,7 @@ for i = 1:size(data, 2)
 end
 hold off;
 xlabel(xlab)
-ylabel(ylab)
+ylabel(ylab, 'fontname', 'Arial')
 legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
@@ -222,7 +222,7 @@ a(2).FaceColor = color{end};
 hold off;
 xlabel(xlab)
 ylabel(ylab)
-ylim([0 1610])
+ylim([0 1610], 'fontname', 'Arial')
 legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 25, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
