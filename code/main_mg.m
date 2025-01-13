@@ -94,7 +94,7 @@ a(1).FaceColor = [255, 89, 95]/256;
 a(2).FaceColor = [106, 76, 147]/256;
 xlabel('Time (hour)', 'fontname', 'Arial')
 ylabel('# of Complexes (rec/cell)', 'fontname', 'Arial')
-legend('VEGF', 'PlGF', 'Location', 'northeastoutside', 'fontname', 'Arial')
+legend('VEGF-A', 'PlGF', 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 17, 'fontname', 'Arial')
 saveas(gca, sprintf('%s/lig_dist', result_foldername), 'epsc')
 saveas(gca, sprintf('%s/lig_dist', result_foldername), 'png')
