@@ -30,7 +30,7 @@ params_struct.species_names = params_raw{1:params_struct.num_state, 'Parameter'}
 
 %% Solve the ODE system
 % Define timeline
-time_stamp = 0:3600*24*20;
+time_stamp = 0:1000:3600*24*100;
 
 result_all_lig = solve_lig_rec(time_stamp, params_struct);
 
