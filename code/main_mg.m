@@ -85,7 +85,7 @@ saveas(gca, sprintf('%s/Figure1A', result_foldername), 'png')
 %% Visualize ligand distribution
 R1_dist = [VR1(:, 1), PR1(:, 1)] * avogadro * EC_area;
 R2_dist = VR2(:, 1) * avogadro * EC_area;
-interest = 1:find(time_stamp == 3600*2400);
+interest = 1:find(time_stamp == 3600*3);
 
 
 figure('Position', [10 10 800 400])
