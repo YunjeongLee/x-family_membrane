@@ -36,7 +36,7 @@ plot_free_vs_bound(time_stamp, [], data_free, data_bound, ylab, lgd_lig, color_l
 
 % Short time
 interest = 20*60+1;
-filename = 'short_dynamics_free_vs_bound_lig_20min';
+filename = 'short_dynamics_free_vs_bound_lig';
 plot_free_vs_bound(time_stamp, interest, data_free, data_bound, ylab, lgd_lig, color_lig, result_foldername, filename)
 
 %% Plot free vs. bound receptor
