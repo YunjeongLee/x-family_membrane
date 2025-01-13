@@ -75,7 +75,7 @@ if result.VB(1) == 0
     data_temp = [result.VA_R1, result.Pl_R1] * 6.02214e23 * 1e-12;
     filename = 'stack_lig_dist_R1';
     ylab_temp = '# of Complexes (rec/cell)';
-    lgd_temp = {'VEGF', 'PlGF'};
+    lgd_temp = {'VEGF-A', 'PlGF'};
     plot_stack(time_stamp, [], data_temp, ylab_temp, lgd_temp, color_lig, result_foldername, filename);
 end
 
