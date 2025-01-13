@@ -45,7 +45,7 @@ EC_area = 1e-5;
 figure('Position', [10 10 1600 1000]);
 subplot(2, 2, 1);
 surf(xrange,time_stamp/3600, V * 1e9, 'EdgeColor', 'none')
-title('V(x,t)', 'fontname', 'Arial')
+title('VEGF-A', 'fontname', 'Arial')
 xlabel('Distance (cm)', 'fontname', 'Arial')
 ylabel('Time (hour)', 'fontname', 'Arial')
 zlabel('Concentration (nM)', 'fontname', 'Arial')
