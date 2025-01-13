@@ -21,9 +21,9 @@ b(2).FaceColor = color_rec{2};
 for j = 1:size(data, 2)
     for i = 1:size(data, 1)
             if j ~= 2
-                text(i-0.1, 3, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'w', 'fontname', 'Arial');
+                text(i-0.1, 3, sprintf('%.0f', data(i, j)), 'FontSize', 17, 'Color', 'w', 'fontname', 'Arial');
             else
-                text(i-0.1, sum(data(i, 1:j))-3, sprintf('%.0f', data(i, j)), 'FontSize', 20, 'Color', 'k', 'fontname', 'Arial');
+                text(i-0.1, sum(data(i, 1:j))-3, sprintf('%.0f', data(i, j)), 'FontSize', 17, 'Color', 'k', 'fontname', 'Arial');
             end
     end
 end
@@ -32,7 +32,7 @@ xlim([0 6])
 ylim([0 100])
 ylabel('Percentage (%)', 'fontname', 'Arial')
 legend('Free', 'Bound', 'Location', 'northeastoutside', 'fontname', 'Arial')
-set(gca, 'fontsize', 25, 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial')
 saveas(gca, sprintf('%s/Receptor_free_VS_bound', result_foldername), 'png')
 saveas(gca, sprintf('%s/Receptor_free_VS_bound', result_foldername), 'epsc')
 
@@ -61,6 +61,6 @@ xlim([0 6])
 ylim([0 100])
 ylabel('Percentage (%)', 'fontname', 'Arial')
 legend('VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB', 'Location', 'northeastoutside', 'fontname', 'Arial')
-set(gca, 'fontsize', 25, 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial')
 saveas(gca, sprintf('%s/Receptor_ligand_dist', result_foldername), 'png')
 saveas(gca, sprintf('%s/Receptor_ligand_dist', result_foldername), 'epsc')
