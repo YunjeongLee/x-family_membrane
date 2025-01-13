@@ -53,7 +53,7 @@ set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 subplot(2, 2, 2);
 surf(xrange,time_stamp/3600, P * 1e9, 'EdgeColor', 'none')
-title('P(x,t)', 'fontname', 'Arial')
+title('PlGF', 'fontname', 'Arial')
 xlabel('Distance (cm)', 'fontname', 'Arial')
 ylabel('Time (hour)', 'fontname', 'Arial')
 zlabel('Concentration (nM)', 'fontname', 'Arial')
