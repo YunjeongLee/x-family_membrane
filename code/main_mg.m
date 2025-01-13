@@ -48,7 +48,7 @@ surf(xrange,time_stamp/3600, V * 1e9, 'EdgeColor', 'none')
 title('V(x,t)')
 xlabel('Distance (cm)')
 ylabel('Time (hour)')
-zlabel('Concentration (nM)')
+zlabel('Concentration (nM)', 'fontname', 'Arial')
 set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 subplot(2, 2, 2);
@@ -56,7 +56,7 @@ surf(xrange,time_stamp/3600, P * 1e9, 'EdgeColor', 'none')
 title('P(x,t)')
 xlabel('Distance (cm)')
 ylabel('Time (hour)')
-zlabel('Concentration (nM)')
+zlabel('Concentration (nM)', 'fontname', 'Arial')
 set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 subplot(2, 2, 3);
@@ -66,7 +66,7 @@ view(90, 0)
 title('VEGFR1 complex(x,t)')
 xlabel('Distance (cm)')
 ylabel('Time (hour)')
-zlabel('Complex (rec/cell)')
+zlabel('Complex (rec/cell)', 'fontname', 'Arial')
 set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 subplot(2, 2, 4);
@@ -76,7 +76,7 @@ view(90, 0)
 title('VEGFR2 complex(x,t)')
 xlabel('Distance (cm)')
 ylabel('Time (hour)')
-zlabel('Complex (rec/cell)')
+zlabel('Complex (rec/cell)', 'fontname', 'Arial')
 set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 saveas(gca, sprintf('%s/Figure1A', result_foldername), 'epsc')
@@ -94,7 +94,7 @@ a(1).FaceColor = [255, 89, 95]/256;
 a(2).FaceColor = [106, 76, 147]/256;
 xlabel('Time (hour)')
 ylabel('# of Complexes (rec/cell)')
-legend('VEGF', 'PlGF', 'Location', 'northeastoutside')
+legend('VEGF', 'PlGF', 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 17, 'fontname', 'Arial')
 saveas(gca, sprintf('%s/lig_dist', result_foldername), 'epsc')
 saveas(gca, sprintf('%s/lig_dist', result_foldername), 'png')
