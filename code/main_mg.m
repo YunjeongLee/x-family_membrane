@@ -45,7 +45,7 @@ EC_area = 1e-5;
 figure('Position', [10 10 1600 1000]);
 subplot(2, 2, 1);
 surf(xrange,time_stamp/3600, V * 1e9, 'EdgeColor', 'none')
-title('V(x,t)')
+title('V(x,t)', 'fontname', 'Arial')
 xlabel('Distance (cm)', 'fontname', 'Arial')
 ylabel('Time (hour)', 'fontname', 'Arial')
 zlabel('Concentration (nM)', 'fontname', 'Arial')
@@ -53,7 +53,7 @@ set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 subplot(2, 2, 2);
 surf(xrange,time_stamp/3600, P * 1e9, 'EdgeColor', 'none')
-title('P(x,t)')
+title('P(x,t)', 'fontname', 'Arial')
 xlabel('Distance (cm)', 'fontname', 'Arial')
 ylabel('Time (hour)', 'fontname', 'Arial')
 zlabel('Concentration (nM)', 'fontname', 'Arial')
@@ -63,7 +63,7 @@ subplot(2, 2, 3);
 surf(xrange, time_stamp/3600, (VR1 + PR1) * avogadro * EC_area);
 ylim([0 1])
 view(90, 0)
-title('VEGFR1 complex(x,t)')
+title('VEGFR1 complex(x,t)', 'fontname', 'Arial')
 xlabel('Distance (cm)', 'fontname', 'Arial')
 ylabel('Time (hour)', 'fontname', 'Arial')
 zlabel('Complex (rec/cell)', 'fontname', 'Arial')
@@ -73,7 +73,7 @@ subplot(2, 2, 4);
 surf(xrange, time_stamp/3600, VR2 * avogadro * EC_area);
 ylim([0 1])
 view(90, 0)
-title('VEGFR2 complex(x,t)')
+title('VEGFR2 complex(x,t)', 'fontname', 'Arial')
 xlabel('Distance (cm)', 'fontname', 'Arial')
 ylabel('Time (hour)', 'fontname', 'Arial')
 zlabel('Complex (rec/cell)', 'fontname', 'Arial')
