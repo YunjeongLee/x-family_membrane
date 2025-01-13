@@ -19,7 +19,7 @@ params = change_unit_mg(params_raw);
 
 %% Generate mesh
 xrange = 0:5e-3:0.1;
-time_stamp = 0:10:3600*24;
+time_stamp = 0:1000:3600*2400;
 
 %% Solve PDE
 m = 0;
