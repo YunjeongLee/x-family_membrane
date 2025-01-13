@@ -222,7 +222,7 @@ a(2).FaceColor = color{end};
 hold off;
 xlabel(xlab, 'fontname', 'Arial')
 ylabel(ylab, 'fontname', 'Arial')
-ylim([0 1610], 'fontname', 'Arial')
+ylim([0 1610])
 legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
 set(gca, 'fontsize', 17, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
