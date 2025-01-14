@@ -13,7 +13,7 @@ for i = 1:size(data, 3)
     xtickformat('%,g')
     title(ttl{i})
     legend(lgd, 'Location', 'northeastoutside')
-    set(gca, 'fontsize', 15, 'xtick', xtick)
+    set(gca, 'fontsize', 15, 'xtick', xtick, 'fontname', 'Arial')
 end
 saveas(gca, filename, 'epsc')
 saveas(gca, filename, 'png')
