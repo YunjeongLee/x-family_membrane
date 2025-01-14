@@ -8,7 +8,7 @@ restoredefaultpath;
 addpath ../data/ model/mg etc/
 
 %% Generate results folder
-result_foldername = 'results/mg/update_kinetic';
+result_foldername = 'results/mg/default';
 if ~exist(result_foldername, 'dir')
     mkdir(result_foldername);
 end
@@ -19,7 +19,7 @@ params = change_unit_mg(params_raw);
 
 %% Generate mesh
 xrange = 0:5e-3:0.1;
-time_stamp = 0:100:3600*24;
+time_stamp = 0:10:3600*24;
 
 %% Solve PDE
 m = 0;
@@ -45,39 +45,39 @@ EC_area = 1e-5;
 figure('Position', [10 10 1600 1000]);
 subplot(2, 2, 1);
 surf(xrange,time_stamp/3600, V * 1e9, 'EdgeColor', 'none')
-title('V(x,t)')
-xlabel('Distance (cm)')
-ylabel('Time (hour)')
-zlabel('Concentration (nM)')
-set(gca, 'fontsize', 25)
+title('VEGF-A', 'fontname', 'Arial')
+xlabel('Distance (cm)', 'fontname', 'Arial')
+ylabel('Time (hour)', 'fontname', 'Arial')
+zlabel('Concentration (nM)', 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 subplot(2, 2, 2);
 surf(xrange,time_stamp/3600, P * 1e9, 'EdgeColor', 'none')
-title('P(x,t)')
-xlabel('Distance (cm)')
-ylabel('Time (hour)')
-zlabel('Concentration (nM)')
-set(gca, 'fontsize', 25)
+title('PlGF', 'fontname', 'Arial')
+xlabel('Distance (cm)', 'fontname', 'Arial')
+ylabel('Time (hour)', 'fontname', 'Arial')
+zlabel('Concentration (nM)', 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 subplot(2, 2, 3);
 surf(xrange, time_stamp/3600, (VR1 + PR1) * avogadro * EC_area);
 ylim([0 1])
 view(90, 0)
-title('VEGFR1 complex(x,t)')
-xlabel('Distance (cm)')
-ylabel('Time (hour)')
-zlabel('Complex (rec/cell)')
-set(gca, 'fontsize', 25)
+title('VEGFR1 complex', 'fontname', 'Arial')
+xlabel('Distance (cm)', 'fontname', 'Arial')
+ylabel('Time (hour)', 'fontname', 'Arial')
+zlabel('Complex (rec/cell)', 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 subplot(2, 2, 4);
 surf(xrange, time_stamp/3600, VR2 * avogadro * EC_area);
 ylim([0 1])
 view(90, 0)
-title('VEGFR2 complex(x,t)')
-xlabel('Distance (cm)')
-ylabel('Time (hour)')
-zlabel('Complex (rec/cell)')
-set(gca, 'fontsize', 25)
+title('VEGFR2 complex', 'fontname', 'Arial')
+xlabel('Distance (cm)', 'fontname', 'Arial')
+ylabel('Time (hour)', 'fontname', 'Arial')
+zlabel('Complex (rec/cell)', 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial')
 
 saveas(gca, sprintf('%s/Figure1A', result_foldername), 'epsc')
 saveas(gca, sprintf('%s/Figure1A', result_foldername), 'png')
@@ -92,9 +92,9 @@ figure('Position', [10 10 800 400])
 a = area(time_stamp(interest)/3600, R1_dist(interest, :), 'EdgeColor', 'none');
 a(1).FaceColor = [255, 89, 95]/256;
 a(2).FaceColor = [106, 76, 147]/256;
-xlabel('Time (hour)')
-ylabel('# of Complexes (rec/cell)')
-legend('VEGF', 'PlGF', 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25)
+xlabel('Time (hour)', 'fontname', 'Arial')
+ylabel('# of Complexes (rec/cell)', 'fontname', 'Arial')
+legend('VEGF-A', 'PlGF', 'Location', 'northeastoutside', 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial')
 saveas(gca, sprintf('%s/lig_dist', result_foldername), 'epsc')
 saveas(gca, sprintf('%s/lig_dist', result_foldername), 'png')

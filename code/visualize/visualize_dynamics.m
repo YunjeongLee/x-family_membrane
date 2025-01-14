@@ -75,7 +75,7 @@ if result.VB(1) == 0
     data_temp = [result.VA_R1, result.Pl_R1] * 6.02214e23 * 1e-12;
     filename = 'stack_lig_dist_R1';
     ylab_temp = '# of Complexes (rec/cell)';
-    lgd_temp = {'VEGF', 'PlGF'};
+    lgd_temp = {'VEGF-A', 'PlGF'};
     plot_stack(time_stamp, [], data_temp, ylab_temp, lgd_temp, color_lig, result_foldername, filename);
 end
 
@@ -166,10 +166,10 @@ for i = 1:size(data_free, 2)
     plot(time_stamp, data_bound(:, i), 'Color', color{i}, 'LineWidth', 3, 'LineStyle', '--');
 end
 hold off;
-xlabel(xlab)
-ylabel(ylab)
-legend(lgd, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
+xlabel(xlab, 'fontname', 'Arial')
+ylabel(ylab, 'fontname', 'Arial')
+legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
@@ -193,10 +193,10 @@ for i = 1:size(data, 2)
     plot(time_stamp, data(:, i), 'Color', color{i}, 'LineWidth', 3);
 end
 hold off;
-xlabel(xlab)
-ylabel(ylab)
-legend(lgd, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
+xlabel(xlab, 'fontname', 'Arial')
+ylabel(ylab, 'fontname', 'Arial')
+legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
@@ -220,11 +220,11 @@ a = area(time_stamp, data, 'EdgeColor', 'none');
 a(1).FaceColor = color{1};
 a(2).FaceColor = color{end};
 hold off;
-xlabel(xlab)
-ylabel(ylab)
+xlabel(xlab, 'fontname', 'Arial')
+ylabel(ylab, 'fontname', 'Arial')
 ylim([0 1610])
-legend(lgd, 'Location', 'northeastoutside')
-set(gca, 'fontsize', 25);
+legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
+set(gca, 'fontsize', 17, 'fontname', 'Arial');
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'epsc')
 saveas(gca, sprintf('%s/%s', result_foldername, filename), 'png')
 
