@@ -7,7 +7,7 @@ for i = 1:size(data, 3)
     colororder(color);
     xline(default, 'LineWidth', 3, 'LineStyle', ':');
     hold off;
-    xlabel(sprintf('[%s] (rec/cell)', xlabels))
+    xlabel(sprintf('[%s] (rec/cell)', xlabels), 'fontname', 'Arial')
     ylabel('Percentage (%)', 'fontname', 'Arial')
     ylim([0 100])
     xtickformat('%,g')

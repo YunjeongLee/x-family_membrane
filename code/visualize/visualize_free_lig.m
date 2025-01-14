@@ -7,7 +7,7 @@ for i = 1:size(data, 2)
     colororder(color{i});
     xline(default, 'LineWidth', 3, 'LineStyle', ':');
     hold off;
-    xlabel(sprintf('[%s] (rec/cell)', xlabels))
+    xlabel(sprintf('[%s] (rec/cell)', xlabels), 'fontname', 'Arial')
     ylabel('pM', 'fontname', 'Arial')
     xtickformat('%,g')
     title(ttl{i}, 'fontname', 'Arial')
