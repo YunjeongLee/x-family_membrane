@@ -10,7 +10,7 @@ for i = 1:size(data, 2)
     xlabel(sprintf('[%s] (rec/cell)', xlabels))
     ylabel('pM')
     xtickformat('%,g')
-    title(ttl{i})
+    title(ttl{i}, 'fontname', 'Arial')
     legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
     set(gca, 'fontsize', 15, 'xtick', xtick, 'fontname', 'Arial')
 end
