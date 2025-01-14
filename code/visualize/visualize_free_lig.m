@@ -8,7 +8,7 @@ for i = 1:size(data, 2)
     xline(default, 'LineWidth', 3, 'LineStyle', ':');
     hold off;
     xlabel(sprintf('[%s] (rec/cell)', xlabels))
-    ylabel('pM')
+    ylabel('pM', 'fontname', 'Arial')
     xtickformat('%,g')
     title(ttl{i}, 'fontname', 'Arial')
     legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
