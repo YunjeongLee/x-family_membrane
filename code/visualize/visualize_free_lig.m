@@ -11,7 +11,7 @@ for i = 1:size(data, 2)
     ylabel('pM')
     xtickformat('%,g')
     title(ttl{i})
-    legend(lgd, 'Location', 'northeastoutside')
+    legend(lgd, 'Location', 'northeastoutside', 'fontname', 'Arial')
     set(gca, 'fontsize', 15, 'xtick', xtick, 'fontname', 'Arial')
 end
 saveas(gca, filename, 'epsc')
