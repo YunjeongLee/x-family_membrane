@@ -29,12 +29,12 @@ PDBB_R2,Concentration of PDGF-BB:VEGFR2,0.000E+00,M,Assumed
 PDBB_PDRa,Concentration of PDGF-BB:PDGFRα,0.000E+00,M,Assumed
 PDBB_PDRb,Concentration of PDGF-BB:PDGFRβ,0.000E+00,M,Assumed
 R1_N1,Concentration of VEGFR1:NRP1,0.000E+00,M,Assumed
-konVAR1,Association rate of VEGF-A binding to VEGFR1,1.100E+07,1/M/s,"Lee et al., 2024"
-koffVAR1,Dissociation rate of VEGF-A bound to VEGFR1,1.000E-04,1/s,"Lee et al., 2024"
-konVAR2,Association rate of VEGF-A binding to VEGFR2,4.600E+06,1/M/s,"Lee et al., 2024"
-koffVAR2,Dissociation rate of VEGF-A bound to VEGFR2,7.700E-04,1/s,"Lee et al., 2024"
-konVAN1,Association rate of VEGF-A binding to NRP1,1.300E+06,1/M/s,"Lee et al., 2024"
-koffVAN1,Dissociation rate of VEGF-A bound to NRP1,3.500E-03,1/s,"Lee et al., 2024"
+konVAR1,Association rate of VEGF-A binding to VEGFR1,1.100E+07,1/M/s,"Lee et al., BioRxiv"
+koffVAR1,Dissociation rate of VEGF-A bound to VEGFR1,1.000E-04,1/s,"Lee et al., BioRxiv"
+konVAR2,Association rate of VEGF-A binding to VEGFR2,4.600E+06,1/M/s,"Lee et al., BioRxiv"
+koffVAR2,Dissociation rate of VEGF-A bound to VEGFR2,7.700E-04,1/s,"Lee et al., BioRxiv"
+konVAN1,Association rate of VEGF-A binding to NRP1,1.300E+06,1/M/s,"Lee et al., BioRxiv"
+koffVAN1,Dissociation rate of VEGF-A bound to NRP1,3.500E-03,1/s,"Lee et al., BioRxiv"
 kcVAN1_R2,Coupling rate of VEGF-A:NRP1 binding to VEGFR2,1.000E+14,cm2/mol/s,"Finley et al., 2011 & Mac Gabhann and Popel, 2005"
 koffVAN1_R2,Dissociation rate of VEGF-A:NRP1 bound to VEGFR2,1.000E-03,1/s,"Finley et al., 2011 & Mac Gabhann and Popel, 2005"
 kcVAR2_N1,Coupling rate of VEGF-A:VEGFR2 binding to NRP1,3.100E+13,cm2/mol/s,"Mac Gabhann and Popel, 2005 & Dembo et al., 1982"
