@@ -72,7 +72,7 @@ filename = 'dynamics_lig_dist_R1';
 plot_bound(time_stamp, [], data, ylab, lgd, color, result_foldername, filename);
 
 if result.VB(1) == 0
-    data_temp = [result.VA_R1, result.Pl_R1] * 6.02214e23 * 1e-12;
+    data_temp = [result.VA_R1, result.Pl_R1] * avogadro * EC_vol;
     filename = 'stack_lig_dist_R1';
     ylab_temp = '# of Complexes (rec/cell)';
     lgd_temp = {'VEGF-A', 'PlGF'};
