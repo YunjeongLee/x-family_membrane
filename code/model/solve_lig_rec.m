@@ -59,7 +59,7 @@ ind_PDRb = strcmp(params_struct.species_names, 'PDRb');
 % Record concentration
 result.R1_free = ( sol(:, ind_R1) + sol(:, ind_R1_N1) );
 result.R2_free = sol(:, ind_R2);
-result.N1_free = sol(:, ind_N1);
+result.N1_free = sol(:, ind_N1) + sol(:, ind_R1_N1);
 result.PDRa_free = sol(:, ind_PDRa);
 result.PDRb_free = sol(:, ind_PDRb);
 
