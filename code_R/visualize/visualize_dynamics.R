@@ -48,11 +48,11 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
     lig_name = lig[i]
     lig_result_name = lig_result[i]
     # Free ligand
-    colName = paste(lig_name, '(Free)')
+    colName = paste(rec_name, '(Free)')
     colName_results = paste0(rec_result_name, '_free')
     df[[colName]] <- results[[colName_results]] * 1e12
     # Bound ligand
-    colName = paste(lig_name, '(Bound)')
+    colName = paste(rec_name, '(Bound)')
     colName_results = paste0(rec_result_name, '_bound')
     df[[colName]] <- results[[colName_results]] * 1e12
   }
