@@ -44,5 +44,5 @@ results_path = "results/default/"
 dir.create(results_path, recursive = TRUE)
 
 visualize_dynamics(time_stamp, results, results_path)
-# visualize_lig_prop(results, result_foldername)
-# visualize_rec_prop(results, result_foldername)
+visualize_lig_prop(results, results_path)
+visualize_rec_prop(results, results_path)
