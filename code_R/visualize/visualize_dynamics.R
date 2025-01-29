@@ -43,4 +43,23 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
   ggsave(sprintf("%s/dynamics_free_vs_bound_lig.pdf", result_foldername), width = 6, height = 3, units = "in")
   
   # Generate free vs. bound receptor data -----------------------------------
+  df <- data.frame(matrix(ncol=0, nrow=length(results$time)))
+  for (i in 1:length(lig)) {
+    lig_name = lig[i]
+    lig_result_name = lig_result[i]
+    # Free ligand
+    colName = paste(lig_name, '(Free)')
+    colName_results = paste0(lig_result_name, '_free')
+    df[[colName]] <- results[[colName_results]] * 1e12
+    # Bound ligand
+    colName = paste(lig_name, '(Bound)')
+    colName_results = paste0(lig_result_name, '_bound')
+    df[[colName]] <- results[[colName_results]] * 1e12
+  }
+  df_colnames = colnames(df)
+  df$time <- results$time
+  df <- pivot_longer(df, cols = -time,
+                     names_to = "variable", values_to = "value")
+  df$variable <- factor(df$variable, levels=df_colnames)
+  
 }
