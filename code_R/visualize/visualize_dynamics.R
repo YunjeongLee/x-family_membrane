@@ -46,7 +46,7 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
   df <- data.frame(matrix(ncol=0, nrow=length(results$time)))
   for (i in 1:length(lig)) {
     lig_name = lig[i]
-    lig_result_name = lig_result[i]
+    rec_result_name = rec_result[i]
     # Free receptor
     colName = paste(rec_name, '(Free)')
     colName_results = paste0(rec_result_name, '_free')
