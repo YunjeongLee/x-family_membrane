@@ -45,7 +45,7 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
   # Generate free vs. bound receptor data -----------------------------------
   df <- data.frame(matrix(ncol=0, nrow=length(results$time)))
   for (i in 1:length(lig)) {
-    lig_name = lig[i]
+    rec_name = rec[i]
     rec_result_name = rec_result[i]
     # Free receptor
     colName = paste(rec_name, '(Free)')
