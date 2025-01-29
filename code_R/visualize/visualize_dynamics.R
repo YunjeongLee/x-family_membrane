@@ -62,4 +62,5 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
                      names_to = "variable", values_to = "value")
   df$variable <- factor(df$variable, levels=df_colnames)
   
+  # Plot free vs. bound receptor --------------------------------------------
 }
