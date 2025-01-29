@@ -73,7 +73,7 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
     scale_linetype_manual(values=df$linestyle) +
     labs(x = "Time (hour)", y = "Receptors/cell") +
     theme(text = element_text(size= 10)) +
-    scale_y_continuous(breaks = seq(0, 1200, 200), labels = seq(0, 1200, 200)) + 
+    scale_y_continuous(breaks = seq(0, 4.5e4, 0.5e4), labels = seq(0, 4.5e4, 0.5e4)) +
     theme_light()
   ggsave(sprintf("%s/dynamics_free_vs_bound_rec.pdf", result_foldername), width = 6, height = 3, units = "in")
   
