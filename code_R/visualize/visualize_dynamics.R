@@ -71,7 +71,7 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
     geom_line(linewidth = 1) +
     scale_colour_manual(values=df$colors) +
     scale_linetype_manual(values=df$linestyle) +
-    labs(x = "Time (hour)", y = "Concentration (pM)") +
+    labs(x = "Time (hour)", y = "Receptors/cell") +
     theme(text = element_text(size= 10)) +
     scale_y_continuous(breaks = seq(0, 1200, 200), labels = seq(0, 1200, 200)) + 
     theme_light()
