@@ -19,7 +19,7 @@ for (i in 1:length(subfolders)) {
 }
 
 # Load libraries ----------------------------------------------------------
-pckg_list = c("deSolve", "stringr", "ggplot2", "tidyr", "tidyverse")
+pckg_list = c("deSolve", "stringr", "ggplot2", "tidyr", "tidyverse", "latex2exp")
 instant_pkgs(pckg_list)
 
 # Load parameters ---------------------------------------------------------
