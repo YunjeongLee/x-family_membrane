@@ -43,6 +43,8 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
   ggsave(sprintf("%s/dynamics_free_vs_bound_lig.pdf", result_foldername), width = 6, height = 3, units = "in")
   
   # Generate free vs. bound receptor data -----------------------------------
+  avogadro = 6.02214e23;  # molecule/mol
+  EC_vol = 1e-12; # liter
   df <- data.frame(matrix(ncol=0, nrow=length(results$time)))
   for (i in 1:length(rec)) {
     rec_name = rec[i]
