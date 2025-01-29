@@ -63,7 +63,7 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
   df$variable <- factor(df$variable, levels=df_colnames)
   
   # Plot free vs. bound receptor --------------------------------------------
-  df$colors = rep(rep(color_lig, each=2), length(results$time))
+  df$colors = rep(rep(color_rec, each=2), length(results$time))
   df$linestyle = rep(c("solid", "dotted"), length(results$time) * length(color_rec))
   p = ggplot(data = df, aes(x = time/3600, y = value, color = variable, linetype = variable)) +
     geom_line(linewidth = 1) +
