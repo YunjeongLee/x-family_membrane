@@ -27,13 +27,8 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
   df$time <- results$time
   df <- pivot_longer(df, cols = -time,
                      names_to = "variable", values_to = "value")
-  df$variable <- factor(df$variable, levels=c("VEGF-A (Free)",  "VEGF-A (Bound)",
-                                              "VEGF-B (Free)",  "VEGF-B (Bound)",
-                                              "PlGF (Free)",    "PlGF (Bound)",
-                                              "PDGF-AA (Free)", "PDGF-AA (Bound)",
-                                              "PDGF-AB (Free)", "PDGF-AB (Bound)",
-                                              "PDGF-BB (Free)", "PDGF-BB (Bound)"))
-                                              
+  df$variable <- factor(df$variable, levels=df_colnames)
+  
   # Plot free vs. bound ligand ----------------------------------------------
   df$colors = rep(rep(color_lig, each=2), length(results$time))
   df$linestyle = rep(c("solid", "dotted"), length(results$time) * length(color_lig))
