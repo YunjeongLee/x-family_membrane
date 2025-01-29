@@ -47,7 +47,7 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
   for (i in 1:length(lig)) {
     lig_name = lig[i]
     lig_result_name = lig_result[i]
-    # Free ligand
+    # Free receptor
     colName = paste(rec_name, '(Free)')
     colName_results = paste0(rec_result_name, '_free')
     df[[colName]] <- results[[colName_results]] * 1e12
