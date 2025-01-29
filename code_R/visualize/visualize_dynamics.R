@@ -52,11 +52,11 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
     # Free receptor
     colName = paste(rec_name, '(Free)')
     colName_results = paste0(rec_result_name, '_free')
-    df[[colName]] <- results[[colName_results]] * 1e12
+    df[[colName]] <- results[[colName_results]] * avogadro * EC_vol
     # Bound ligand
     colName = paste(rec_name, '(Bound)')
     colName_results = paste0(rec_result_name, '_bound')
-    df[[colName]] <- results[[colName_results]] * 1e12
+    df[[colName]] <- results[[colName_results]] * avogadro * EC_vol
   }
   df_colnames = colnames(df)
   df$time <- results$time
