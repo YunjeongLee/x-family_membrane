@@ -23,6 +23,7 @@ visualize_dynamics <- function(time_stamp, results, result_foldername) {
     colName_results = paste0(lig_result_name, '_bound')
     df[[colName]] <- results[[colName_results]] * 1e12
   }
+  df_colnames = colnames(df)
   df$time <- results$time
   df <- pivot_longer(df, cols = -time,
                      names_to = "variable", values_to = "value")
