@@ -81,4 +81,15 @@ visualize_rec_prop <- function(results, result_foldername) {
   df$Receptor <- factor(df$Receptor, levels=rec)
   df$Ligand <- factor(df$Ligand, levels=lig)
   
+  # Plot bar graph ----------------------------------------------------------
+  p = ggplot(df, aes(x = Receptor, y = Value, fill = Ligand)) +
+    geom_col(position = position_stack(reverse=TRUE)) +
+    scale_x_discrete(labels = function(x) TeX(x)) +
+    scale_y_continuous(labels = scales::percent_format()) +
+    scale_fill_manual(values=color_lig) +
+    labs(x = "Receptor", y = "Percentage (%)") +
+    theme(text = element_text(size= 10)) + theme_light()
+  show(p)
+  ggsave(sprintf("%s/Receptor_ligand_dist.pdf", result_foldername), width = 6, height = 3, units = "in")
+  
 }
