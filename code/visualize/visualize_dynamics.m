@@ -5,7 +5,7 @@ color_rec = {'#8ecae6', '#219ebc', '#023047', '#ffb703', '#fb8500'};
 
 %% List of ligands and receptors
 lig = {'VEGF-A', 'VEGF-B', 'PlGF', 'PDGF-AA', 'PDGF-AB', 'PDGF-BB'};
-rec = {'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFRa', 'PDGFRb'};
+rec = {'VEGFR1', 'VEGFR2', 'NRP1', 'PDGFR\alpha', 'PDGFR\beta'};
 
 %% Define legend
 lgd_lig = {};
