@@ -1,6 +1,7 @@
 visualize_rec_prop <- function(results, result_foldername) {
   # Define colors -----------------------------------------------------------
   colors = c('#eac435', '#345995')
+  color_lig = c('#ff595e', '#ff924c', '#ffca3a', '#8ac926', '#1982c4', '#6a4c93')
   
   # Calculate the percentage of free vs. bound receptors --------------------
   rec = c('VEGFR1', 'VEGFR2', 'NRP1', '$PDGFR\\alpha$', '$PDGFR\\beta$')
