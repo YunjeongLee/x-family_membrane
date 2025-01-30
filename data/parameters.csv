@@ -1,15 +1,15 @@
 ﻿Parameter,Interpretation,value,Unit,Reference
-VA,Concentration of VEGF-A,1.000E-09,M,Assumed
-VB,Concentration of VEGF-B,1.000E-09,M,Assumed
-Pl,Concentration of PlGF,1.000E-09,M,Assumed
-PDAA,Concentration of PDGF-AA,1.000E-09,M,Assumed
-PDAB,Concentration of PDGF-AB,1.000E-09,M,Assumed
-PDBB,Concentration of PDGF-BB,1.000E-09,M,Assumed
+VA,Concentration of VEGF-A,2.220E-06,M,Assumed
+VB,Concentration of VEGF-B,0.000E+00,M,Assumed
+Pl,Concentration of PlGF,2.220E-06,M,Assumed
+PDAA,Concentration of PDGF-AA,0.000E+00,M,Assumed
+PDAB,Concentration of PDGF-AB,0.000E+00,M,Assumed
+PDBB,Concentration of PDGF-BB,0.000E+00,M,Assumed
 R1,VEGFR1 density on endothelial cell,1.600E+03,molecule/cell,"Fang et al., BioRxiv"
 R2,VEGFR2 density on endothelial cell,4.100E+03,molecule/cell,"Fang et al., BioRxiv"
-N1,NRP1 density on endothelial cell,4.410E+04,molecule/cell,"Chen et al., 2015"
-PDRa,PDGFRα density on endothelial cell,5.000E+03,molecule/cell,"Fang et al., BioRxiv"
-PDRb,PDGFRβ density on endothelilal cell,5.300E+03,molecule/cell,"Fang et al., BioRxiv"
+N1,NRP1 density on endothelial cell,0.000E+00,molecule/cell,"Chen et al., 2015"
+PDRa,PDGFRα density on endothelial cell,0.000E+00,molecule/cell,"Fang et al., BioRxiv"
+PDRb,PDGFRβ density on endothelilal cell,0.000E+00,molecule/cell,"Fang et al., BioRxiv"
 VA_R1,Concentration of VEGF-A:VEGFR1,0.000E+00,M,Assumed
 VA_R2,Concentration of VEGF-A:VEGFR2,0.000E+00,M,Assumed
 VA_N1,Concentration of VEGF-A:NRP1,0.000E+00,M,Assumed
