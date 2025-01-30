@@ -8,7 +8,7 @@ restoredefaultpath;
 addpath ../data model/ etc/ visualize/
 
 %% Generate results folder
-result_foldername = 'results/no_PlGF/default';
+result_foldername = 'results/all_ligand/excess_VA_Pl';
 if ~exist(result_foldername, 'dir')
     mkdir(result_foldername);
 end
